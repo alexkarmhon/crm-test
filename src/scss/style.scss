@@ -1,5 +1,5 @@
-@use "../../node_modules/normalize.css/normalize.css";
-@use "utils/vars.scss";
+@use "utils/normalize";
+@use "utils/vars";
 
 #app {
   width: 100vw;
