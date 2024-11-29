@@ -1,28 +1,32 @@
-@mixin viewport-md {
-  @media (min-width: 767px) {
-    @content;
-  }
+@mixin font-500($font-size) {
+  font-weight: 500;
+  font-size: $font-size;
+}
+@mixin font-600($font-size) {
+  font-weight: 600;
+  font-size: $font-size;
 }
 
-@mixin text-gradient {
-  background: var(--hero-name-background);
-  background-clip: text;
-  color: transparent;
+@mixin drop-shadow-sm() {
+  filter: drop-shadow(0 1px 2px #5569871a);
 }
 
-@mixin roboto-condensed($font-size, $font-weight) {
-  font-family: "Roboto Condensed", Arial, sans-serif;
-  font-size: $font-size;
-  font-weight: $font-weight;
+@mixin drop-shadow() {
+  filter: drop-shadow(0 2px 4px -2px #55698705);
 }
 
-@mixin calibri-regular($font-size) {
-  font-family: "Calibri", sans-serif;
-  font-size: $font-size;
-  font-weight: 400;
+@mixin drop-shadow-md() {
+  filter: drop-shadow(0 4px 6px -2px #55698705);
 }
-@mixin calibri-bold($font-size) {
-  font-family: "Calibri", sans-serif;
-  font-size: $font-size;
-  font-weight: 700;
+
+@mixin drop-shadow-lg() {
+  filter: drop-shadow(0 8px 8px -4px #55698705);
+}
+
+@mixin drop-shadow-xl() {
+  filter: drop-shadow(0 24px 48px -12px #5569870f);
+}
+
+@mixin drop-shadow-2xl() {
+  filter: drop-shadow(0 32px 64px -12px #55698714);
 }
