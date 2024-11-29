@@ -1,0 +1,14 @@
+@use "normalize.css";
+@use "utils/vars.scss";
+
+#app {
+  width: 100vw;
+  height: 100vh;
+  background-color: blueviolet;
+
+  .test {
+    width: 100px;
+    height: 100px;
+    background-color: vars.$color-primary;
+  }
+}
