@@ -1,0 +1,50 @@
+.container {
+  width: 100%;
+  max-width: 1200;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 24px;
+  padding-right: 24px;
+
+  .content {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .header & {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .production &,
+  .advantages & {
+    padding: 0 10px;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .container {
+    width: 480px;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .container {
+    width: 1200px;
+    padding-left: 15px;
+    padding-right: 15px;
+    .header & {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  }
+}

@@ -1,0 +1,28 @@
+@mixin viewport-md {
+  @media (min-width: 767px) {
+    @content;
+  }
+}
+
+@mixin text-gradient {
+  background: var(--hero-name-background);
+  background-clip: text;
+  color: transparent;
+}
+
+@mixin roboto-condensed($font-size, $font-weight) {
+  font-family: "Roboto Condensed", Arial, sans-serif;
+  font-size: $font-size;
+  font-weight: $font-weight;
+}
+
+@mixin calibri-regular($font-size) {
+  font-family: "Calibri", sans-serif;
+  font-size: $font-size;
+  font-weight: 400;
+}
+@mixin calibri-bold($font-size) {
+  font-family: "Calibri", sans-serif;
+  font-size: $font-size;
+  font-weight: 700;
+}
