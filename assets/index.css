@@ -1,91 +1,27 @@
 @charset "UTF-8";
-/* roboto-condensed-100 - cyrillic_latin */
+/* plus-jakarta-sans-regular - latin */
 @font-face {
   font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: "Roboto Condensed";
-  font-style: normal;
-  font-weight: 100;
-  src: url("/crm-test/assets/Roboto-Condensed-100.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-/* roboto-condensed-200 - cyrillic_latin */
-@font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: "Roboto Condensed";
-  font-style: normal;
-  font-weight: 200;
-  src: url("/src/fonts/fonts/Roboto-Condensed-200.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-/* roboto-condensed-300 - cyrillic_latin */
-@font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: "Roboto Condensed";
-  font-style: normal;
-  font-weight: 300;
-  src: url("/crm-test/assets/Roboto-Condensed-300.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-/* roboto-condensed-regular - cyrillic_latin */
-@font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: "Roboto Condensed";
+  font-family: "Plus Jakarta Sans";
   font-style: normal;
   font-weight: 400;
-  src: url("/crm-test/assets/Roboto-Condensed-400.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url("/crm-test/assets/plus-jakarta-sans-v8-latin-400.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
-/* roboto-condensed-500 - cyrillic_latin */
+/* plus-jakarta-sans-500 - latin */
 @font-face {
   font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: "Roboto Condensed";
+  font-family: "Plus Jakarta Sans";
   font-style: normal;
   font-weight: 500;
-  src: url("/crm-test/assets/Roboto-Condensed-500.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url("/crm-test/assets/plus-jakarta-sans-v8-latin-500.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
-/* roboto-condensed-600 - cyrillic_latin */
+/* plus-jakarta-sans-600 - latin */
 @font-face {
   font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: "Roboto Condensed";
+  font-family: "Plus Jakarta Sans";
   font-style: normal;
   font-weight: 600;
-  src: url("/crm-test/assets/Roboto-Condensed-600.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-/* roboto-condensed-700 - cyrillic_latin */
-@font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: "Roboto Condensed";
-  font-style: normal;
-  font-weight: 700;
-  src: url("/crm-test/assets/Roboto-Condensed-700.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-/* roboto-condensed-800 - cyrillic_latin */
-@font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: "Roboto Condensed";
-  font-style: normal;
-  font-weight: 800;
-  src: url("/crm-test/assets/Roboto-Condensed-800.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-/* roboto-condensed-900 - cyrillic_latin */
-@font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: "Roboto Condensed";
-  font-style: normal;
-  font-weight: 900;
-  src: url("/crm-test/assets/Roboto-Condensed-900.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-/*calibri-regular-400*/
-@font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: "Calibri";
-  font-style: normal;
-  font-weight: 400;
-  src: url("/crm-test/assets/Calibri.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-/*calibri-bold-800*/
-@font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: "Calibri";
-  font-style: normal;
-  font-weight: 700;
-  src: url("/crm-test/assets/Calibri-Bold.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url("/crm-test/assets/plus-jakarta-sans-v8-latin-600.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 /***
     The new CSS reset - version 1.11 (last updated 20.9.2023)
@@ -223,18 +159,16 @@ meter {
 }
 
 body {
-  font-family: "Roboto Condensed", Arial, sans-serif;
-  font-size: 18px;
+  font-family: "Plus Jakarta Sans", Arial, sans-serif;
   font-weight: 400;
-  width: 100%;
-  height: 100%;
+  font-size: 16px;
   padding: 0;
   margin: 0;
   overflow-x: hidden;
   overflow-y: scroll;
   list-style-position: inside;
-  color: #313131;
-  background-color: blue;
+  color: #111827;
+  background-color: #fff;
   line-height: 24px;
   letter-spacing: 0.01em;
 }
