@@ -1,4 +1,12 @@
 @charset "UTF-8";
+/* plus-jakarta-sans-300 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Plus Jakarta Sans";
+  font-style: normal;
+  font-weight: 300;
+  src: url("/crm-test/fonts/plus-jakarta-sans-v8-latin-400.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
 /* plus-jakarta-sans-regular - latin */
 @font-face {
   font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
@@ -188,7 +196,7 @@ a {
   text-decoration: none;
 }
 
-.wrapper {
+.body-wrapper {
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-box;
@@ -203,30 +211,16 @@ a {
 
 .container {
   width: 100%;
-  max-width: 1200;
+  max-width: 1200px;
+  padding-left: 14px;
+  padding-right: 14px;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 24px;
-  padding-right: 24px;
-}
-.container .content {
-  width: 100%;
-  margin: 0 auto;
-}
-.header .container {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
-  display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-     -moz-box-pack: justify;
-          justify-content: space-between;
-}
-.production .container, .advantages .container {
-  padding: 0 10px;
 }
 .aside {
+  position: fixed;
+  display: block;
+  width: 100%;
   padding: 32px 16px 40px 16px;
   background-color: #111827;
 }
@@ -242,10 +236,10 @@ a {
      -moz-box-orient: vertical;
      -moz-box-direction: normal;
           flex-direction: column;
-  gap: 32px;
 }
 .nav-bar .logo__link {
   display: block;
+  margin-top: 0;
 }
 .nav-bar .logo__link .logotype {
   width: 122px;
@@ -262,16 +256,9 @@ a {
   -webkit-justify-content: center;
      -moz-box-pack: center;
           justify-content: center;
+  margin-top: 32px;
   gap: 28px;
   color: #fafafa;
-}
-.nav-bar .nav-list li .current::after {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 2px;
-  border-radius: 2px;
-  background-color: #e9d5ff;
 }
 .nav-bar .nav-list__link {
   font-weight: 500;
@@ -279,25 +266,36 @@ a {
   line-height: 24px;
   color: #fafafa;
 }
-.nav-bar .nav-list__link--dashboard::before {
+.nav-bar .nav-list__link.current::after {
+  content: "";
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: flex;
+  width: 100%;
+  height: 2px;
+  border-radius: 2px;
+  background-color: #e9d5ff;
+}
+.nav-bar .nav-list__link.dashboard-link::before {
   content: url("../images/dashboard-icon.svg");
   position: relative;
-  top: 3px;
   width: 18px;
   height: 18px;
   margin-right: 6px;
   color: #fafafa;
 }
-.nav-bar .nav-list__link--companies::before {
+.nav-bar .nav-list__link.companies-link::before {
   content: url("../images/companies-icon.svg");
   position: relative;
-  top: 3px;
   width: 18px;
   height: 18px;
   margin-right: 6px;
   color: #fafafa;
 }
 .nav-bar .exit-button {
+  position: relative;
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-box;
@@ -310,8 +308,10 @@ a {
   gap: 8px;
   width: 55px;
   height: 24px;
+  margin-top: 32px;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 0;
   background-color: inherit;
   color: #fafafa;
 }
@@ -325,27 +325,135 @@ a {
   line-height: 24px;
   margin-top: 2px;
 }
-@media screen and (min-width: 480px){
-  .container {
-    width: 480px;
-    margin: 0 auto;
+main {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+     -moz-box-orient: vertical;
+     -moz-box-direction: normal;
+          flex-direction: column;
+  width: 100%;
+}
+
+header .container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+          align-items: center;
+  gap: 20px;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #d1d5db;
+}
+header .container .page-title {
+  font-weight: 600;
+  font-size: 16px;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+     -moz-box-flex: 1;
+          flex: 1;
+  line-height: 36px;
+  border-right: 1px solid #d1d5db;
+}
+header .container .user-info {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: flex;
+  gap: 12px;
+}
+header .container .user-info img {
+  width: 44px;
+  height: 44px;
+}
+header .container .user-info .user-name {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 24px;
+}
+header .container .user-info .user-email {
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 20px;
+}
+@media (min-width: 768px){
+  .body-wrapper {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+       -moz-box-orient: horizontal;
+       -moz-box-direction: normal;
+            flex-direction: row;
+  }
+  .aside {
+    width: 240px;
+    height: 100vh;
+  }
+  .nav-bar {
+    height: 100%;
+  }
+  .nav-bar .nav-list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+       -moz-box-orient: vertical;
+       -moz-box-direction: normal;
+            flex-direction: column;
+  }
+  .nav-bar .nav-list__link {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+       -moz-box-align: center;
+            align-items: center;
+  }
+  .nav-bar .nav-list__link.current::after {
+    right: -12px;
+    width: 4px;
+    height: 36px;
+    margin-left: auto;
+    border-radius: 2px;
+    background-color: #e9d5ff;
+  }
+  .nav-bar .exit-button {
+    right: 8px;
+    margin-top: auto;
+    margin-bottom: 0;
   }
 }
 @media screen and (min-width: 768px){
   .container {
-    width: 768px;
-    padding-left: 40px;
-    padding-right: 40px;
+    padding-left: 28px;
+    padding-right: 14px;
+  }
+  header .container .page-title {
+    font-size: 30px;
+  }
+  header .container .user-info .user-name {
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 24px;
+  }
+  header .container .user-info .user-email {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 20px;
   }
 }
-@media screen and (min-width: 1280px){
+@media screen and (min-width: 1200px){
   .container {
-    width: 1200px;
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-  .header .container {
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 40px;
+    padding-right: 28px;
   }
 }
