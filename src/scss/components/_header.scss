@@ -1,0 +1,59 @@
+@use "../utils/vars";
+@use "../utils/mixins";
+
+header {
+  .container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid vars.$gray-300;
+
+    .page-title {
+      @include mixins.font-600(16px);
+      flex: 1;
+      line-height: 36px;
+      border-right: 1px solid vars.$gray-300;
+    }
+    .user-info {
+      display: flex;
+      gap: 12px;
+
+      img {
+        width: 44px;
+        height: 44px;
+      }
+
+      .user-name {
+        @include mixins.font-600(14px);
+        line-height: 24px;
+      }
+      .user-email {
+        @include mixins.font-300(12px);
+        line-height: 20px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  header {
+    .container {
+      .page-title {
+        font-size: 30px;
+      }
+
+      .user-info {
+        .user-name {
+          @include mixins.font-600(15px);
+          line-height: 24px;
+        }
+        .user-email {
+          @include mixins.font-300(14px);
+          line-height: 20px;
+        }
+      }
+    }
+  }
+}

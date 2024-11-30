@@ -1,3 +1,7 @@
+@mixin font-300($font-size) {
+  font-weight: 300;
+  font-size: $font-size;
+}
 @mixin font-500($font-size) {
   font-weight: 500;
   font-size: $font-size;
