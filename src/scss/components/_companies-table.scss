@@ -1,0 +1,186 @@
+@use "../utils/vars";
+@use "../utils/mixins";
+
+.table-wrapper {
+  background-color: #f3f4f6;
+  padding: 0px 40px 32px 40px;
+
+  table {
+    width: 100%;
+    border-spacing: 0 8px;
+    border-collapse: separate;
+    table-layout: auto;
+    thead {
+      tr {
+        th {
+          @include mixins.font-300(14px, 20px);
+          padding: 24px 0 12px 0;
+          text-align: center;
+
+          &:first-of-type {
+            text-align: start;
+          }
+
+          &:nth-of-type(2) {
+            text-align: start;
+          }
+
+          &.hidden {
+            display: none;
+
+            @media screen and (min-width: 1024px) {
+              display: table-cell;
+            }
+          }
+        }
+      }
+    }
+
+    tbody {
+      tr {
+        @include mixins.font-500(14px, 20px);
+        height: 56px;
+        text-align: center;
+        background-color: #ffffff;
+
+        td {
+          &:first-of-type {
+            text-align: start;
+            border-radius: 4px 0 0 4px;
+          }
+
+          &:last-of-type {
+            border-radius: 0 4px 4px 0;
+          }
+
+          &.category {
+            @include mixins.font-500(12px, 16px);
+            display: none;
+            padding-left: 12px;
+            color: #1d4ed8;
+            border-left: 4px solid #1d4ed8;
+
+            @media (min-width: 1024px) {
+              display: table-cell;
+            }
+          }
+
+          &.company {
+            a {
+              display: flex;
+
+              img {
+                display: block;
+                width: 24px;
+                height: 24px;
+                margin-right: 8px;
+              }
+            }
+          }
+
+          &.status {
+            .status-badge {
+              display: inline-flex;
+              align-items: center;
+              padding: 4px 14px;
+              border-radius: 28px;
+
+              .status-indicator {
+                display: block;
+                width: 4px;
+                height: 4px;
+                margin-right: 8px;
+                background-color: currentColor;
+                border-radius: 2px;
+              }
+
+              &--active {
+                color: vars.$green-700;
+                background-color: vars.$status-active-color;
+              }
+
+              &--not-active {
+                color: vars.$red-700;
+                background-color: vars.$status-not-active-color;
+              }
+
+              &--pending {
+                color: vars.$orange-700;
+                background-color: vars.$status-pending-color;
+              }
+
+              &--suspended {
+                color: vars.$blue-700;
+                background-color: vars.$status-suspended-color;
+              }
+            }
+          }
+
+          &.promotion {
+            .promotion__info {
+              @include mixins.font-500(14px, 20px);
+              display: inline-flex;
+              gap: 6px;
+              align-items: center;
+
+              &--yes {
+                color: vars.$green-700;
+              }
+              &--no {
+                color: vars.$red-700;
+              }
+
+              img {
+                width: 16px;
+                height: 16px;
+              }
+            }
+          }
+
+          &.country {
+            font-size: 14px;
+          }
+
+          &.joined-date {
+            display: none;
+
+            @media screen and (min-width: 1024px) {
+              display: table-cell;
+            }
+          }
+        }
+
+        &:nth-of-type(1) {
+          .category {
+            color: vars.$orange-400;
+            border-left: 4px solid vars.$orange-400;
+          }
+        }
+        &:nth-of-type(2) {
+          .category {
+            color: vars.$blue-400;
+            border-left: 4px solid vars.$blue-400;
+          }
+        }
+        &:nth-of-type(3) {
+          .category {
+            color: vars.$rose-400;
+            border-left: 4px solid vars.$rose-400;
+          }
+        }
+        &:nth-of-type(4) {
+          .category {
+            color: vars.$emerald-400;
+            border-left: 4px solid vars.$emerald-400;
+          }
+        }
+        &:nth-of-type(5) {
+          .category {
+            color: vars.$purple-400;
+            border-left: 4px solid vars.$purple-400;
+          }
+        }
+      }
+    }
+  }
+}

@@ -4,7 +4,7 @@
 @use "base/reset";
 @use "base/common";
 
-@use "components/aside";
+@use "components/sidebar";
 @use "components/main";
 @use "components/header";
 
@@ -13,3 +13,6 @@
 @use "components/categories";
 @use "components/countries";
 @use "components/promotions";
+
+@use "components/toolbar";
+@use "components/companies-table";

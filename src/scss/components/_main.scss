@@ -11,7 +11,7 @@ main {
   width: 100%;
   height: 100vh;
 
-  .container {
+  .dashboard-container {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     gap: 12px;
@@ -31,19 +31,32 @@ main {
       padding: 0;
     }
   }
-}
-
-@media (min-width: 768px) {
-  main {
-    .container {
-      padding-left: 28px;
+  .companies-container {
+    .toolbar {
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: center;
+      gap: 28px;
+      padding: 32px 40px;
     }
   }
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 768px) {
   main {
-    .container {
+    .dashboard-container {
+      padding-left: 28px;
+    }
+    .companies-container {
+      .toolbar {
+      }
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  main {
+    .dashboard-container {
       grid-template-columns: repeat(12, 1fr);
       gap: 20px;
       padding: 40px 28px 40px 40px;
@@ -63,6 +76,16 @@ main {
       .countries,
       .promotions {
         grid-column: span 6 / span 12;
+      }
+
+      .companies {
+        grid-column: span 12 / span 12;
+      }
+    }
+
+    .companies-container {
+      .toolbar {
+        flex-direction: row;
       }
     }
   }
