@@ -1,14 +1,22 @@
-@mixin font-300($font-size) {
+@mixin font-300($font-size, $line-height) {
   font-weight: 300;
   font-size: $font-size;
+  line-height: $line-height;
 }
-@mixin font-500($font-size) {
+@mixin font-400($font-size, $line-height) {
+  font-weight: 400;
+  font-size: $font-size;
+  line-height: $line-height;
+}
+@mixin font-500($font-size, $line-height) {
   font-weight: 500;
   font-size: $font-size;
+  line-height: $line-height;
 }
-@mixin font-600($font-size) {
+@mixin font-600($font-size, $line-height) {
   font-weight: 600;
   font-size: $font-size;
+  line-height: $line-height;
 }
 
 @mixin drop-shadow-sm() {

@@ -3,8 +3,13 @@
 
 @use "base/reset";
 @use "base/common";
-@use "base/container";
 
 @use "components/aside";
 @use "components/main";
 @use "components/header";
+
+@use "components/stats-section";
+@use "components/sales-details-section";
+@use "components/categories";
+@use "components/countries";
+@use "components/promotions";

@@ -1,0 +1,76 @@
+@use "../utils/vars";
+@use "../utils/mixins";
+
+.sales {
+  background-color: vars.$secondary-background-color;
+  border: 1px solid vars.$secondary-background-color;
+  overflow: hidden;
+
+  table {
+    width: 100%;
+    border-spacing: 0;
+
+    thead {
+      tr {
+        th {
+          @include mixins.font-400(12px, 16px);
+          padding: 6px 20px;
+          text-align: left;
+
+          &:first-of-type {
+            border-radius: 2px 0 0 2px;
+          }
+
+          &:last-of-type {
+            border-radius: 0 2px 2px 0;
+          }
+
+          &:nth-child(1) {
+            color: #ffffff;
+            background-color: vars.$gray-900;
+          }
+          &:nth-child(2) {
+            text-align: center;
+            background-color: vars.$purple-200;
+          }
+          &:nth-child(3) {
+            text-align: center;
+            background-color: vars.$lime-200;
+          }
+        }
+      }
+    }
+
+    tbody {
+      tr:nth-child(2n) {
+        background-color: vars.$secondary-background-color;
+      }
+      tr {
+        &:nth-child(2n + 1) {
+          background-color: #ffffff;
+        }
+        td {
+          @include mixins.font-400(14px, 20px);
+          padding: 8px 19px;
+          text-align: center;
+          border-right: 1px solid vars.$secondary-background-color;
+
+          &:not(:first-of-type) {
+            width: 104px;
+          }
+
+          &:first-of-type {
+            display: flex;
+            gap: 8px;
+            border-left: 1px solid vars.$secondary-background-color;
+          }
+
+          img {
+            width: 20px;
+            height: 20px;
+          }
+        }
+      }
+    }
+  }
+}

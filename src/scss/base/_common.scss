@@ -31,9 +31,17 @@ a {
   text-decoration: none;
 }
 
+.section-title {
+  @include mixins.font-500(20px, 28px);
+  padding: 20px;
+}
+
 .body-wrapper {
   display: flex;
   flex-direction: column;
+  max-width: 1440px;
+  max-height: 1024px;
+  margin: 0 auto;
 
   @media (min-width: 768px) {
     flex-direction: row;

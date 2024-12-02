@@ -1,0 +1,82 @@
+@use "../utils/vars";
+@use "../utils/mixins";
+
+.stats-wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+
+  &__cell {
+    grid-column: span 2 / span 4;
+    padding: 28px;
+    border-radius: 4px;
+    background-size: cover;
+
+    &:nth-child(4n + 1) {
+      background-image: url("../images/mesh-gradient-1.svg");
+    }
+    &:nth-child(4n + 2) {
+      background-image: url("../images/mesh-gradient-2.svg");
+    }
+    &:nth-child(4n + 3) {
+      background-image: url("../images/mesh-gradient-3.svg");
+    }
+    &:nth-child(4n + 4) {
+      background-image: url("../images/mesh-gradient-4.svg");
+    }
+
+    & .stat-name {
+      @include mixins.font-400(8px, 10px);
+      display: flex;
+      align-items: center;
+      text-align: left;
+      margin-bottom: 20px;
+
+      &::before {
+        content: "";
+        display: block;
+        width: 10px;
+        height: 2px;
+        margin-right: 8px;
+        border-radius: 4px;
+        background-color: vars.$gray-900;
+      }
+    }
+
+    & .stat-value {
+      @include mixins.font-600(52px, 60px);
+      text-align: center;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .stats-wrapper {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    &__cell {
+      & .stat-name {
+        @include mixins.font-400(12px, 16px);
+
+        &::before {
+          content: "";
+          width: 16px;
+        }
+      }
+
+      & .stat-value {
+        @include mixins.font-600(60px, 60px);
+        margin-left: 24px;
+        text-align: left;
+      }
+    }
+  }
+}
+
+@media (min-width: 1440px) {
+  .stats-wrapper {
+    gap: 20px;
+    &__cell {
+      grid-column: span 1 / span 4;
+    }
+  }
+}

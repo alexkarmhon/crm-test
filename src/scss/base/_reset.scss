@@ -49,12 +49,6 @@ img {
   max-block-size: 100%;
   display: block;
   width: 100%;
-  object-fit: cover;
-}
-
-/* removes spacing between cells in tables */
-table {
-  border-collapse: collapse;
 }
 
 /* Safari - solving issue when using user-select:none on the <body> text input doesn't working */

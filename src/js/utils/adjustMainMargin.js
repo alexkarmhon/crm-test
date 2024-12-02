@@ -1,10 +1,6 @@
-const aside = document.querySelector("aside");
-const main = document.querySelector("main");
-const wrapper = document.querySelector(".body-wrapper");
-
 const adjustMainMargin = () => {
   const aside = document.querySelector("aside");
-  const main = document.querySelector("main");
+  const main = document.querySelector(".content");
   const wrapper = document.querySelector(".body-wrapper");
 
   const isWrapperBlock = getComputedStyle(wrapper).flexDirection === "column";
