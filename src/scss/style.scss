@@ -7,12 +7,13 @@
 @use "components/sidebar";
 @use "components/main";
 @use "components/header";
-
+// Dashboard
 @use "components/stats-section";
 @use "components/sales-details-section";
 @use "components/categories";
 @use "components/countries";
 @use "components/promotions";
-
+// Companies
 @use "components/toolbar";
 @use "components/companies-table";
+// Company
