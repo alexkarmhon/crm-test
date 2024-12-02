@@ -212,7 +212,7 @@ a {
   margin: 0 auto;
 }
 
-.aside {
+.sidebar {
   position: fixed;
   display: block;
   width: 100%;
@@ -339,7 +339,7 @@ main {
   width: 100%;
   height: 100vh;
 }
-main .container {
+main .dashboard-container {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   gap: 12px;
@@ -349,14 +349,32 @@ main .container {
   margin-left: auto;
   margin-right: auto;
 }
-main .container section {
+main .dashboard-container section {
   width: 100%;
   border: 1px;
   border-radius: 4px;
 }
-main .container .stats,
-main .container .sales {
+main .dashboard-container .stats,
+main .dashboard-container .sales {
   padding: 0;
+}
+main .companies-container .toolbar {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+  -webkit-flex-direction: column-reverse;
+     -moz-box-orient: vertical;
+     -moz-box-direction: reverse;
+          flex-direction: column-reverse;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+          align-items: center;
+  gap: 28px;
+  padding: 32px 40px;
 }
 header .container {
   display: -webkit-box;
@@ -671,6 +689,251 @@ header .container .user-info .user-email {
   width: 20px;
   height: 20px;
 }
+
+.toolbar {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+  -webkit-flex-direction: column-reverse;
+     -moz-box-orient: vertical;
+     -moz-box-direction: reverse;
+          flex-direction: column-reverse;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+          align-items: center;
+  gap: 28px;
+  padding: 32px 40px;
+}
+.toolbar .search-section {
+  width: 100%;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+     -moz-box-flex: 1;
+          flex: 1;
+}
+.toolbar .search-section .search-wrapper {
+  position: relative;
+  max-width: 455px;
+}
+.toolbar .search-section .search-wrapper .search-input {
+  position: relative;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+     -moz-box-flex: 1;
+          flex: 1;
+  width: 100%;
+  height: 44px;
+  padding: 12px;
+  border: 1px solid #d1d5db;
+  background-color: #f9fafb;
+  border-radius: 6px;
+}
+.toolbar .search-section .search-wrapper .search-input::-webkit-input-placeholder {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  color: #637381;
+}
+.toolbar .search-section .search-wrapper .search-input::-moz-placeholder {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  color: #637381;
+}
+.toolbar .search-section .search-wrapper .search-input:-ms-input-placeholder {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  color: #637381;
+}
+.toolbar .search-section .search-wrapper .search-input::-ms-input-placeholder {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  color: #637381;
+}
+.toolbar .search-section .search-wrapper .search-input::placeholder {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  color: #637381;
+}
+.toolbar .search-section .search-wrapper .search-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 12px;
+  background: none;
+}
+.toolbar .search-section .search-wrapper .search-button img {
+  width: 20px;
+  height: 20px;
+}
+.toolbar .add-button {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  padding: 10px 20px;
+  background-color: #111827;
+  color: #fafafa;
+  text-align: center;
+  border-radius: 4px;
+}
+.table-wrapper {
+  background-color: #f3f4f6;
+  padding: 0px 40px 32px 40px;
+}
+.table-wrapper table {
+  width: 100%;
+  border-spacing: 0 8px;
+  border-collapse: separate;
+  table-layout: auto;
+}
+.table-wrapper table thead tr th {
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 20px;
+  padding: 24px 0 12px 0;
+  text-align: center;
+}
+.table-wrapper table thead tr th:first-of-type {
+  text-align: start;
+}
+.table-wrapper table thead tr th:nth-of-type(2) {
+  text-align: start;
+}
+.table-wrapper table thead tr th.hidden {
+  display: none;
+}
+.table-wrapper table tbody tr {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  height: 56px;
+  text-align: center;
+  background-color: #ffffff;
+}
+.table-wrapper table tbody tr td:first-of-type {
+  text-align: start;
+  border-radius: 4px 0 0 4px;
+}
+.table-wrapper table tbody tr td:last-of-type {
+  border-radius: 0 4px 4px 0;
+}
+.table-wrapper table tbody tr td.category {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  display: none;
+  padding-left: 12px;
+  color: #1d4ed8;
+  border-left: 4px solid #1d4ed8;
+}
+.table-wrapper table tbody tr td.company a {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: flex;
+}
+.table-wrapper table tbody tr td.company a img {
+  display: block;
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+}
+.table-wrapper table tbody tr td.status .status-badge {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -moz-inline-box;
+  display: inline-flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+          align-items: center;
+  padding: 4px 14px;
+  border-radius: 28px;
+}
+.table-wrapper table tbody tr td.status .status-badge .status-indicator {
+  display: block;
+  width: 4px;
+  height: 4px;
+  margin-right: 8px;
+  background-color: currentColor;
+  border-radius: 2px;
+}
+.table-wrapper table tbody tr td.status .status-badge--active {
+  color: #15803d;
+  background-color: #dcfce7;
+}
+.table-wrapper table tbody tr td.status .status-badge--not-active {
+  color: #b91c1c;
+  background-color: #fee2e2;
+}
+.table-wrapper table tbody tr td.status .status-badge--pending {
+  color: #c2410c;
+  background-color: #ffedd5;
+}
+.table-wrapper table tbody tr td.status .status-badge--suspended {
+  color: #1d4ed8;
+  background-color: #dbeafe;
+}
+.table-wrapper table tbody tr td.promotion .promotion__info {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -moz-inline-box;
+  display: inline-flex;
+  gap: 6px;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+          align-items: center;
+}
+.table-wrapper table tbody tr td.promotion .promotion__info--yes {
+  color: #15803d;
+}
+.table-wrapper table tbody tr td.promotion .promotion__info--no {
+  color: #b91c1c;
+}
+.table-wrapper table tbody tr td.promotion .promotion__info img {
+  width: 16px;
+  height: 16px;
+}
+.table-wrapper table tbody tr td.country {
+  font-size: 14px;
+}
+.table-wrapper table tbody tr td.joined-date {
+  display: none;
+}
+.table-wrapper table tbody tr:nth-of-type(1) .category {
+  color: #fb923c;
+  border-left: 4px solid #fb923c;
+}
+.table-wrapper table tbody tr:nth-of-type(2) .category {
+  color: #60a5fa;
+  border-left: 4px solid #60a5fa;
+}
+.table-wrapper table tbody tr:nth-of-type(3) .category {
+  color: #fb7185;
+  border-left: 4px solid #fb7185;
+}
+.table-wrapper table tbody tr:nth-of-type(4) .category {
+  color: #34d399;
+  border-left: 4px solid #34d399;
+}
+.table-wrapper table tbody tr:nth-of-type(5) .category {
+  color: #c084fc;
+  border-left: 4px solid #c084fc;
+}
 @media screen and (min-width: 425px){
   .countries .countries-wrapper .countries-list {
     grid-column: span 1/span 4;
@@ -694,7 +957,7 @@ header .container .user-info .user-email {
        -moz-box-direction: normal;
             flex-direction: row;
   }
-  .aside {
+  .sidebar {
     width: 240px;
     height: 100vh;
   }
@@ -734,7 +997,7 @@ header .container .user-info .user-email {
     margin-top: auto;
     margin-bottom: 0;
   }
-  main .container {
+  main .dashboard-container {
     padding-left: 28px;
   }
 }
@@ -821,32 +1084,64 @@ header .container .user-info .user-email {
     height: 260px;
   }
 }
-@media (min-width: 1280px){
-  main .container {
+@media (min-width: 1024px){
+  main .dashboard-container {
     grid-template-columns: repeat(12, 1fr);
     gap: 20px;
     padding: 40px 28px 40px 40px;
   }
-  main .container .stats {
+  main .dashboard-container .stats {
     grid-column: span 12/span 12;
   }
-  main .container .sales {
+  main .dashboard-container .sales {
     grid-column: span 5/span 12;
   }
-  main .container .categories {
+  main .dashboard-container .categories {
     grid-column: span 7/span 12;
   }
-  main .container .countries,
-  main .container .promotions {
+  main .dashboard-container .countries,
+  main .dashboard-container .promotions {
     grid-column: span 6/span 12;
   }
+  main .dashboard-container .companies {
+    grid-column: span 12/span 12;
+  }
+  main .companies-container .toolbar {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+       -moz-box-orient: horizontal;
+       -moz-box-direction: normal;
+            flex-direction: row;
+  }
+  .toolbar {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+       -moz-box-orient: horizontal;
+       -moz-box-direction: normal;
+            flex-direction: row;
+  }
+  .table-wrapper table tbody tr td.category {
+    display: table-cell;
+  }
+}
+@media screen and (min-width: 1024px){
+  .table-wrapper table thead tr th.hidden {
+    display: table-cell;
+  }
+  .table-wrapper table tbody tr td.joined-date {
+    display: table-cell;
+  }
+}
+@media (min-width: 1280px){
   header .container {
     padding-left: 40px;
     padding-right: 28px;
   }
 }
 @media (min-width: 1440px){
-  .aside {
+  .sidebar {
     width: 240px;
     max-height: 1024px;
   }
