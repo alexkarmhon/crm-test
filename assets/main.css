@@ -251,7 +251,8 @@ a {
   -webkit-justify-content: center;
      -moz-box-pack: center;
           justify-content: center;
-  margin-top: 32px;
+  margin-top: 6px;
+  margin-bottom: 6px;
   gap: 28px;
   color: #fafafa;
 }
@@ -707,6 +708,7 @@ header .container .user-info .user-email {
        -moz-box-orient: vertical;
        -moz-box-direction: normal;
             flex-direction: column;
+    margin-top: 77px;
   }
   .nav-bar .nav-list__link {
     display: -webkit-box;
@@ -717,6 +719,7 @@ header .container .user-info .user-email {
     -webkit-align-items: center;
        -moz-box-align: center;
             align-items: center;
+    height: 36px;
   }
   .nav-bar .nav-list__link.current::after {
     right: -12px;
