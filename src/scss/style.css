@@ -218,7 +218,8 @@ a {
 .nav-bar .nav-list {
   display: flex;
   justify-content: center;
-  margin-top: 32px;
+  margin-top: 6px;
+  margin-bottom: 6px;
   gap: 28px;
   color: #fafafa;
 }
@@ -289,10 +290,12 @@ a {
   }
   .nav-bar .nav-list {
     flex-direction: column;
+    margin-top: 77px;
   }
   .nav-bar .nav-list__link {
     display: flex;
     align-items: center;
+    height: 36px;
   }
   .nav-bar .nav-list__link.current::after {
     right: -12px;
