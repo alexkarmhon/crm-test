@@ -31,6 +31,14 @@
   font-weight: 600;
   src: url("/crm-test/fonts/plus-jakarta-sans-v8-latin-600.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
+/* plus-jakarta-sans-700 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Plus Jakarta Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url("/crm-test/fonts/plus-jakarta-sans-v8-latin-700.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
 /***
     The new CSS reset - version 1.11 (last updated 20.9.2023)
     GitHub page: https://github.com/elad2412/the-new-css-reset
@@ -332,7 +340,8 @@ main {
   width: 100%;
   height: 100vh;
 }
-main .dashboard-container {
+main .dashboard-container,
+main .company-wrapper {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   gap: 12px;
@@ -342,13 +351,16 @@ main .dashboard-container {
   margin-left: auto;
   margin-right: auto;
 }
-main .dashboard-container section {
+main .dashboard-container section,
+main .company-wrapper section {
   width: 100%;
   border: 1px;
   border-radius: 4px;
 }
 main .dashboard-container .stats,
-main .dashboard-container .sales {
+main .dashboard-container .sales,
+main .company-wrapper .stats,
+main .company-wrapper .sales {
   padding: 0;
 }
 main .companies-container .toolbar {
@@ -369,7 +381,7 @@ main .companies-container .toolbar {
   gap: 28px;
   padding: 32px 40px;
 }
-header .container {
+header .header-container {
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-box;
@@ -382,7 +394,7 @@ header .container {
   padding: 24px 14px 24px 14px;
   border-bottom: 1px solid #d1d5db;
 }
-header .container .page-title {
+header .header-container .page-title {
   font-weight: 600;
   font-size: 16px;
   line-height: 36px;
@@ -392,21 +404,21 @@ header .container .page-title {
           flex: 1;
   border-right: 1px solid #d1d5db;
 }
-header .container .user-info {
+header .header-container .user-info {
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-box;
   display: flex;
   gap: 12px;
 }
-header .container .user-info img {
+header .header-container .user-info img {
   width: 44px;
   height: 44px;
 }
-header .container .user-info .user-name {
+header .header-container .user-info .user-name {
   display: none;
 }
-header .container .user-info .user-email {
+header .header-container .user-info .user-email {
   display: none;
 }
 .stats-wrapper {
@@ -927,6 +939,168 @@ header .container .user-info .user-email {
   color: #c084fc;
   border-left: 4px solid #c084fc;
 }
+
+.company-information {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+     -moz-box-orient: vertical;
+     -moz-box-direction: normal;
+          flex-direction: column;
+  gap: 20px;
+}
+.company-information__banner {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+     -moz-box-orient: vertical;
+     -moz-box-direction: normal;
+          flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+          align-items: center;
+  gap: 20px;
+  padding: 28px;
+  background-color: #111827;
+  border-radius: 4px;
+}
+.company-information__banner .logo {
+  width: 80px;
+  height: 80px;
+}
+.company-information__banner .company-name {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: #fafafa;
+}
+.company-information__banner .status-badge {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -moz-inline-box;
+  display: inline-flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+          align-items: center;
+  padding: 4px 14px;
+  border-radius: 28px;
+}
+.company-information__banner .status-badge .status-indicator {
+  display: block;
+  width: 4px;
+  height: 4px;
+  margin-right: 8px;
+  background-color: currentColor;
+  border-radius: 2px;
+}
+.company-information__banner .status-badge--active {
+  color: #15803d;
+  background-color: #dcfce7;
+}
+.company-information__banner .status-badge--not-active {
+  color: #b91c1c;
+  background-color: #fee2e2;
+}
+.company-information__banner .status-badge--pending {
+  color: #c2410c;
+  background-color: #ffedd5;
+}
+.company-information__banner .status-badge--suspended {
+  color: #1d4ed8;
+  background-color: #dbeafe;
+}
+.company-information__about {
+  padding: 20px;
+  background-color: #f3f4f6;
+  border-radius: 4px;
+}
+.company-information__about .details {
+  border-bottom: 1px solid #d1d5db;
+  padding-bottom: 32px;
+}
+.company-information__about .details p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+.company-information__about .details p:not(:last-of-type) {
+  margin-bottom: 12px;
+}
+.company-information__about .details .subtitle {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 28px;
+  margin-bottom: 20px;
+}
+.company-information__about .overview {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  padding-top: 32px;
+}
+
+.company-promotions {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  gap: 20px;
+}
+.company-promotions .promotion {
+  grid-column: span 12/span 12;
+  background-color: #f3f4f6;
+  border-radius: 4px;
+}
+.company-promotions .promotion__banner {
+  height: 160px;
+  overflow: hidden;
+  border-radius: 4px;
+  background-color: #d9d9d9;
+}
+.company-promotions .promotion__banner .discount {
+  width: 52px;
+  height: 52px;
+  padding-right: 2px;
+  padding-top: 12px;
+  color: #d9f99d;
+  background-color: #111827;
+  border-right: 1px solid #d9f99d;
+  border-bottom-right-radius: 999px;
+}
+.company-promotions .promotion__banner .discount .value {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+}
+.company-promotions .promotion__description {
+  padding: 20px;
+}
+.company-promotions .promotion__description h3 {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 12px;
+}
+.company-promotions .promotion__description p {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+}
 @media screen and (min-width: 425px){
   .countries .countries-wrapper .countries-list {
     grid-column: span 1/span 4;
@@ -939,6 +1113,9 @@ header .container .user-info .user-email {
   }
   .countries .countries-wrapper .world-map {
     grid-column: span 3/span 4;
+  }
+  .company-promotions .promotion {
+    grid-column: span 6/span 12;
   }
 }
 @media (min-width: 768px){
@@ -995,19 +1172,19 @@ header .container .user-info .user-email {
   }
 }
 @media screen and (min-width: 768px){
-  header .container {
+  header .header-container {
     padding-left: 28px;
   }
-  header .container .page-title {
+  header .header-container .page-title {
     font-size: 30px;
   }
-  header .container .user-info .user-name {
+  header .header-container .user-info .user-name {
     font-weight: 600;
     font-size: 15px;
     line-height: 24px;
     display: block;
   }
-  header .container .user-info .user-email {
+  header .header-container .user-info .user-email {
     font-weight: 300;
     font-size: 14px;
     line-height: 20px;
@@ -1078,26 +1255,41 @@ header .container .user-info .user-email {
   }
 }
 @media (min-width: 1024px){
-  main .dashboard-container {
+  main .dashboard-container,
+  main .company-wrapper {
     grid-template-columns: repeat(12, 1fr);
     gap: 20px;
     padding: 40px 28px 40px 40px;
   }
-  main .dashboard-container .stats {
+  main .dashboard-container .stats,
+  main .company-wrapper .stats {
     grid-column: span 12/span 12;
   }
-  main .dashboard-container .sales {
+  main .dashboard-container .sales,
+  main .company-wrapper .sales {
     grid-column: span 5/span 12;
   }
-  main .dashboard-container .categories {
+  main .dashboard-container .categories,
+  main .company-wrapper .categories {
     grid-column: span 7/span 12;
   }
   main .dashboard-container .countries,
-  main .dashboard-container .promotions {
+  main .dashboard-container .promotions,
+  main .company-wrapper .countries,
+  main .company-wrapper .promotions {
     grid-column: span 6/span 12;
   }
-  main .dashboard-container .companies {
+  main .dashboard-container .companies,
+  main .company-wrapper .companies {
     grid-column: span 12/span 12;
+  }
+  main .dashboard-container .company-information,
+  main .company-wrapper .company-information {
+    grid-column: span 4/span 12;
+  }
+  main .dashboard-container .company-promotions,
+  main .company-wrapper .company-promotions {
+    grid-column: span 8/span 12;
   }
   main .companies-container .toolbar {
     -webkit-box-orient: horizontal;
@@ -1115,6 +1307,9 @@ header .container .user-info .user-email {
        -moz-box-direction: normal;
             flex-direction: row;
   }
+  .toolbar.company-toolbar {
+    padding-right: 28px;
+  }
   .table-wrapper table tbody tr td.category {
     display: table-cell;
   }
@@ -1128,9 +1323,13 @@ header .container .user-info .user-email {
   }
 }
 @media (min-width: 1280px){
-  header .container {
+  header .dashboard-header-container {
     padding-left: 40px;
     padding-right: 28px;
+  }
+  header .companies-header-container,
+  header .company-header-container {
+    padding-right: 40px;
   }
 }
 @media (min-width: 1440px){
@@ -1138,10 +1337,24 @@ header .container .user-info .user-email {
     width: 240px;
     max-height: 1024px;
   }
+  main .company-wrapper .company-information {
+    grid-column: span 3/span 12;
+  }
+  main .company-wrapper .company-promotions {
+    grid-column: span 9/span 12;
+  }
   .stats-wrapper {
     gap: 20px;
   }
   .stats-wrapper__cell {
     grid-column: span 1/span 4;
+  }
+}
+@media screen and (min-width: 1440px){
+  .company-promotions {
+    grid-template-columns: repeat(9, minmax(0, 1fr));
+  }
+  .company-promotions .promotion {
+    grid-column: span 3/span 9;
   }
 }
