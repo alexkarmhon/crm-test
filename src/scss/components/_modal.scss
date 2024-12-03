@@ -1,0 +1,61 @@
+@use "../utils/vars";
+
+.modal {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+
+  &-overlay {
+    position: fixed;
+    inset: 0;
+    background-color: vars.$backdrop-color;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  &-content {
+    position: relative;
+    background-color: vars.$secondary-background-color;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+    padding: 14px;
+    width: 90%;
+    width: fit-content;
+    height: fit-content;
+    margin: 40px auto;
+
+    .close-button {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      padding: 0px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      outline: none;
+
+      img {
+        width: 24px;
+        height: 24px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .modal {
+    &-content {
+      top: 190px;
+      left: 496px;
+      padding: 28px;
+      margin: 0;
+    }
+  }
+}
+
+.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  transform: scale(0);
+  transition: transform 400ms ease-out, opacity 400ms ease-out;
+}

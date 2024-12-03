@@ -69,7 +69,7 @@
                   </button>
                 </div>
               </div>
-              <button class="add-button">Add company</button>
+              <button class="add-button" data-modal-open>Add company</button>
             </section>
             <section class="companies">
               <div class="table-wrapper">
@@ -380,6 +380,59 @@
         </main>
       </div>
     </div>
+
+    <!-- Modal -->
+    <div class="modal is-hidden" data-modal>
+      <div class="modal-overlay"></div>
+      <div class="modal-content">
+        <button type="button" class="close-button" data-modal-close>
+          <img src="/images/x-mark-close.svg" alt="Close modal" />
+        </button>
+        <form class="add-company-form">
+          <p class="add-form-title">Add new company</p>
+          <div class="form-left-right">
+            <div class="form-left">
+              <div class="logo-upload">
+                <p>Logo</p>
+                <label class="upload-label">
+                  <img src="/public/images/cloud-arrow-down.svg" alt="Upload" />
+                  <p>Upload photo</p>
+                  <input type="file" accept="image/*" name="avatar" />
+                </label>
+              </div>
+              <div class="form-group">
+                <label for="status">Status</label>
+                <input type="text" id="status" placeholder="Title">
+              </div>
+              <div class="form-group">
+                <label for="country">Country</label>
+                <input type="text" id="country" placeholder="Country" />
+              </div>
+            </div>
+            <div class="form-right">
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" placeholder="Title" />
+              </div>
+              <div class="form-group">
+                <label for="category">Category</label>
+                <input type="text" id="category" placeholder="Title">
+              </div>
+              <div class="form-group">
+                <label for="date">Joined date</label>
+                <input type="text" id="date" placeholder="14.02.2021"/>
+              </div>
+              <div class="form-group">
+                <label for="description">Description</label>
+                <input type="text" id="description" placeholder="Description" />
+              </div>
+            </div>
+          </div>
+          <button type="submit" data-modal-close>Add company</button>
+        </form>
+      </div>
+    </div>
+
     <script type="module" src="./src/js/main.js"></script>
   </body>
 </html>

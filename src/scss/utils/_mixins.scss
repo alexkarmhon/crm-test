@@ -23,27 +23,3 @@
   font-size: $font-size;
   line-height: $line-height;
 }
-
-@mixin drop-shadow-sm() {
-  filter: drop-shadow(0 1px 2px #5569871a);
-}
-
-@mixin drop-shadow() {
-  filter: drop-shadow(0 2px 4px -2px #55698705);
-}
-
-@mixin drop-shadow-md() {
-  filter: drop-shadow(0 4px 6px -2px #55698705);
-}
-
-@mixin drop-shadow-lg() {
-  filter: drop-shadow(0 8px 8px -4px #55698705);
-}
-
-@mixin drop-shadow-xl() {
-  filter: drop-shadow(0 24px 48px -12px #5569870f);
-}
-
-@mixin drop-shadow-2xl() {
-  filter: drop-shadow(0 32px 64px -12px #55698714);
-}
