@@ -11,7 +11,8 @@ main {
   width: 100%;
   height: 100vh;
 
-  .dashboard-container {
+  .dashboard-container,
+  .company-wrapper {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     gap: 12px;
@@ -56,7 +57,8 @@ main {
 
 @media (min-width: 1024px) {
   main {
-    .dashboard-container {
+    .dashboard-container,
+    .company-wrapper {
       grid-template-columns: repeat(12, 1fr);
       gap: 20px;
       padding: 40px 28px 40px 40px;
@@ -81,11 +83,33 @@ main {
       .companies {
         grid-column: span 12 / span 12;
       }
+
+      .company-information {
+        grid-column: span 4 / span 12;
+      }
+
+      .company-promotions {
+        grid-column: span 8 / span 12;
+      }
     }
 
     .companies-container {
       .toolbar {
         flex-direction: row;
+      }
+    }
+  }
+}
+
+@media (min-width: 1440px) {
+  main {
+    .company-wrapper {
+      .company-information {
+        grid-column: span 3 / span 12;
+      }
+
+      .company-promotions {
+        grid-column: span 9 / span 12;
       }
     }
   }

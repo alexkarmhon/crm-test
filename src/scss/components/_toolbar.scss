@@ -63,5 +63,8 @@
 @media (min-width: 1024px) {
   .toolbar {
     flex-direction: row;
+    &.company-toolbar {
+      padding-right: 28px;
+    }
   }
 }

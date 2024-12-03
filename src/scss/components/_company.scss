@@ -1,0 +1,152 @@
+@use "../utils/vars";
+@use "../utils/mixins";
+
+.company-information {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  &__banner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 28px;
+    background-color: vars.$gray-900;
+    border-radius: 4px;
+
+    .logo {
+      width: 80px;
+      height: 80px;
+    }
+
+    .company-name {
+      @include mixins.font-600(16px, 24px);
+      color: vars.$white;
+    }
+
+    .status-badge {
+      @include mixins.font-500(14px, 20px);
+      display: inline-flex;
+      align-items: center;
+      padding: 4px 14px;
+      border-radius: 28px;
+
+      .status-indicator {
+        display: block;
+        width: 4px;
+        height: 4px;
+        margin-right: 8px;
+        background-color: currentColor;
+        border-radius: 2px;
+      }
+
+      &--active {
+        color: vars.$green-700;
+        background-color: vars.$status-active-color;
+      }
+
+      &--not-active {
+        color: vars.$red-700;
+        background-color: vars.$status-not-active-color;
+      }
+
+      &--pending {
+        color: vars.$orange-700;
+        background-color: vars.$status-pending-color;
+      }
+
+      &--suspended {
+        color: vars.$blue-700;
+        background-color: vars.$status-suspended-color;
+      }
+    }
+  }
+  &__about {
+    padding: 20px;
+    background-color: vars.$secondary-background-color;
+    border-radius: 4px;
+    .details {
+      border-bottom: 1px solid vars.$gray-300;
+      padding-bottom: 32px;
+
+      p {
+        @include mixins.font-400(16px, 24px);
+
+        &:not(:last-of-type) {
+          margin-bottom: 12px;
+        }
+      }
+
+      .subtitle {
+        @include mixins.font-600(20px, 28px);
+        margin-bottom: 20px;
+      }
+    }
+    .overview {
+      @include mixins.font-400(16px, 24px);
+      padding-top: 32px;
+    }
+  }
+}
+
+.company-promotions {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  height: fit-content;
+  gap: 20px;
+
+  .promotion {
+    grid-column: span 12 / span 12;
+    background-color: vars.$secondary-background-color;
+    border-radius: 4px;
+    &__banner {
+      height: 160px;
+      overflow: hidden;
+      border-radius: 4px;
+      background-color: vars.$promotion-banner-background;
+
+      .discount {
+        width: 52px;
+        height: 52px;
+        padding-right: 2px;
+        padding-top: 12px;
+        color: vars.$lime-200;
+        background-color: vars.$gray-900;
+        border-right: 1px solid vars.$lime-200;
+        border-bottom-right-radius: 999px;
+        .value {
+          @include mixins.font-700(12px, 16px);
+          text-align: center;
+        }
+      }
+    }
+    &__description {
+      padding: 20px;
+      h3 {
+        @include mixins.font-600(16px, 24px);
+        margin-bottom: 12px;
+      }
+      p {
+        @include mixins.font-400(14px, 20px);
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 425px) {
+  .company-promotions {
+    .promotion {
+      grid-column: span 6 / span 12;
+    }
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .company-promotions {
+    grid-template-columns: repeat(9, minmax(0, 1fr));
+    .promotion {
+      grid-column: span 3 / span 9;
+    }
+  }
+}
