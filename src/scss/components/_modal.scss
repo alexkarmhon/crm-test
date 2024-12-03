@@ -5,6 +5,8 @@
   inset: 0;
   z-index: 50;
 
+  overflow: auto;
+
   &-overlay {
     position: fixed;
     inset: 0;
