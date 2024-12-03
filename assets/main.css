@@ -744,31 +744,31 @@ header .header-container .user-info .user-email {
   font-weight: 500;
   font-size: 14px;
   line-height: 20px;
-  color: #637381;
+  color: #6b7280;
 }
 .toolbar .search-section .search-wrapper .search-input::-moz-placeholder {
   font-weight: 500;
   font-size: 14px;
   line-height: 20px;
-  color: #637381;
+  color: #6b7280;
 }
 .toolbar .search-section .search-wrapper .search-input:-ms-input-placeholder {
   font-weight: 500;
   font-size: 14px;
   line-height: 20px;
-  color: #637381;
+  color: #6b7280;
 }
 .toolbar .search-section .search-wrapper .search-input::-ms-input-placeholder {
   font-weight: 500;
   font-size: 14px;
   line-height: 20px;
-  color: #637381;
+  color: #6b7280;
 }
 .toolbar .search-section .search-wrapper .search-input::placeholder {
   font-weight: 500;
   font-size: 14px;
   line-height: 20px;
-  color: #637381;
+  color: #6b7280;
 }
 .toolbar .search-section .search-wrapper .search-button {
   position: absolute;
@@ -1101,6 +1101,245 @@ header .header-container .user-info .user-email {
   font-size: 14px;
   line-height: 20px;
 }
+.modal {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+}
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(17, 24, 39, 0.6);
+  -webkit-transition: opacity 0.3s ease-in-out;
+  -moz-transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
+}
+.modal-content {
+  position: relative;
+  background-color: #f3f4f6;
+  border-radius: 8px;
+  overflow: hidden;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  padding: 14px;
+  width: 90%;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin: 40px auto;
+}
+.modal-content .close-button {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  padding: 0px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+.modal-content .close-button img {
+  width: 24px;
+  height: 24px;
+}
+.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transform: scale(0);
+     -moz-transform: scale(0);
+      -ms-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: opacity 400ms ease-out, -webkit-transform 400ms ease-out;
+  transition: opacity 400ms ease-out, -webkit-transform 400ms ease-out;
+  -moz-transition: transform 400ms ease-out, opacity 400ms ease-out, -moz-transform 400ms ease-out;
+  transition: transform 400ms ease-out, opacity 400ms ease-out;
+  transition: transform 400ms ease-out, opacity 400ms ease-out, -webkit-transform 400ms ease-out, -moz-transform 400ms ease-out;
+}
+
+.add-company-form {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+     -moz-box-orient: vertical;
+     -moz-box-direction: normal;
+          flex-direction: column;
+  text-align: center;
+}
+.add-company-form .add-form-title {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+}
+.add-company-form .form-left-right {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+     -moz-box-orient: vertical;
+     -moz-box-direction: normal;
+          flex-direction: column;
+  margin-bottom: 20px;
+}
+.add-company-form .form-left-right .form-left,
+.add-company-form .form-left-right .form-right {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+     -moz-box-orient: vertical;
+     -moz-box-direction: normal;
+          flex-direction: column;
+}
+.add-company-form .form-left-right .form-left .form-group,
+.add-company-form .form-left-right .form-right .form-group {
+  -webkit-box-shadow: 0px 2px 4px -2px rgba(85, 105, 135, 0.0196078431), 0px 6px 10px -2px rgba(85, 105, 135, 0.0392156863);
+          box-shadow: 0px 2px 4px -2px rgba(85, 105, 135, 0.0196078431), 0px 6px 10px -2px rgba(85, 105, 135, 0.0392156863);
+  margin-bottom: 10px;
+}
+.add-company-form .form-left-right .form-left .form-group label,
+.add-company-form .form-left-right .form-right .form-group label {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+     -moz-box-orient: vertical;
+     -moz-box-direction: normal;
+          flex-direction: column;
+  margin-bottom: 4px;
+}
+.add-company-form .form-left-right .form-left .form-group input,
+.add-company-form .form-left-right .form-right .form-group input {
+  width: 308px;
+  padding: 6px;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+}
+.add-company-form .form-left-right .form-left .form-group input::-webkit-input-placeholder, .add-company-form .form-left-right .form-right .form-group input::-webkit-input-placeholder {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #d1d5db;
+}
+.add-company-form .form-left-right .form-left .form-group input::-moz-placeholder, .add-company-form .form-left-right .form-right .form-group input::-moz-placeholder {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #d1d5db;
+}
+.add-company-form .form-left-right .form-left .form-group input:-ms-input-placeholder, .add-company-form .form-left-right .form-right .form-group input:-ms-input-placeholder {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #d1d5db;
+}
+.add-company-form .form-left-right .form-left .form-group input::-ms-input-placeholder, .add-company-form .form-left-right .form-right .form-group input::-ms-input-placeholder {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #d1d5db;
+}
+.add-company-form .form-left-right .form-left .form-group input::placeholder,
+.add-company-form .form-left-right .form-right .form-group input::placeholder {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #d1d5db;
+}
+.add-company-form .form-left-right .form-left .logo-upload {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+     -moz-box-orient: vertical;
+     -moz-box-direction: normal;
+          flex-direction: column;
+  gap: 6px;
+  margin-bottom: 8px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.add-company-form .form-left-right .form-left .logo-upload p {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+}
+.add-company-form .form-left-right .form-left .logo-upload .upload-label {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: flex;
+  height: 80px;
+  width: 80px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+     -moz-box-orient: vertical;
+     -moz-box-direction: normal;
+          flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+     -moz-box-pack: center;
+          justify-content: center;
+  background-color: #fff;
+  border: 1px dashed #0f172a;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.add-company-form .form-left-right .form-left .logo-upload .upload-label img {
+  width: 32px;
+  height: 32px;
+  margin-bottom: 4px;
+}
+.add-company-form .form-left-right .form-left .logo-upload .upload-label p {
+  font-weight: 400;
+  font-size: 8px;
+  line-height: 12px;
+  color: #6b7280;
+}
+.add-company-form .form-left-right .form-left .logo-upload .upload-label input[type=file] {
+  display: none;
+}
+.add-company-form button {
+  padding: 10px 20px;
+  background-color: #111827;
+  color: #fafafa;
+  font-family: "Plus Jakarta Sans";
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  border-radius: 4px;
+  cursor: pointer;
+  -webkit-transition: background-color 0.2s ease-in-out;
+  -moz-transition: background-color 0.2s ease-in-out;
+  transition: background-color 0.2s ease-in-out;
+}
 @media screen and (min-width: 425px){
   .countries .countries-wrapper .countries-list {
     grid-column: span 1/span 4;
@@ -1253,6 +1492,74 @@ header .header-container .user-info .user-email {
     width: 395px;
     height: 260px;
   }
+  .add-company-form {
+    text-align: start;
+  }
+  .add-company-form .add-form-title {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 28px;
+    margin-bottom: 42px;
+  }
+  .add-company-form .form-left-right {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+       -moz-box-orient: horizontal;
+       -moz-box-direction: normal;
+            flex-direction: row;
+    gap: 28px;
+    margin-bottom: 40px;
+  }
+  .add-company-form .form-left-right .form-left .form-group:not(:last-of-type),
+  .add-company-form .form-left-right .form-right .form-group:not(:last-of-type) {
+    margin-bottom: 20px;
+  }
+  .add-company-form .form-left-right .form-left .form-group label,
+  .add-company-form .form-left-right .form-right .form-group label {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 8px;
+  }
+  .add-company-form .form-left-right .form-left .form-group input,
+  .add-company-form .form-left-right .form-right .form-group input {
+    min-height: 44px;
+    padding: 12px;
+  }
+  .add-company-form .form-left-right .form-left .logo-upload {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+       -moz-box-orient: horizontal;
+       -moz-box-direction: normal;
+            flex-direction: row;
+    gap: 20px;
+    margin-bottom: 16px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .add-company-form .form-left-right .form-left .logo-upload p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .add-company-form .form-left-right .form-left .logo-upload .upload-label {
+    height: 176px;
+    width: 176px;
+  }
+  .add-company-form .form-left-right .form-left .logo-upload .upload-label img {
+    width: 48px;
+    height: 48px;
+  }
+  .add-company-form .form-left-right .form-left .logo-upload .upload-label p {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .add-company-form .form-left-right .form-left .logo-upload .upload-label input[type=file] {
+    display: none;
+  }
 }
 @media (min-width: 1024px){
   main .dashboard-container,
@@ -1356,5 +1663,11 @@ header .header-container .user-info .user-email {
   }
   .company-promotions .promotion {
     grid-column: span 3/span 9;
+  }
+  .modal-content {
+    top: 190px;
+    left: 496px;
+    padding: 28px;
+    margin: 0;
   }
 }
