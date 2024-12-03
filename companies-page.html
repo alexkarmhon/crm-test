@@ -3,8 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="/crm-test/favicon/favicon.png" type="image/x-icon" />
     <title>CRM-test</title>
-    <script type="module" crossorigin src="/crm-test/assets/main-52c03c91.js"></script>
+    <script type="module" crossorigin src="/crm-test/assets/main-62d7d0fe.js"></script>
     <link rel="stylesheet" href="/crm-test/assets/main.css">
   </head>
   <body>
@@ -78,8 +79,8 @@
                 <table>
                   <thead>
                     <tr>
-                      <th class=" hidden">Category</th>
-                      <th >Company</th>
+                      <th class="hidden">Category</th>
+                      <th>Company</th>
                       <th>Status</th>
                       <th>Promotion</th>
                       <th>Country</th>
@@ -160,7 +161,6 @@
                         <div class="promotion__info promotion__info--yes">
                           <img src="/crm-test/images/check.svg" alt="Promotion Icon" />
                           <span>Yes</span>
-                        </div>
                         </div>
                       </td>
                       <td class="country">USA</td>
@@ -381,7 +381,9 @@
           </div>
         </main>
       </div>
-      <!-- Modal -->
+    </div>
+
+    <!-- Modal -->
     <div class="modal is-hidden" data-modal>
       <div class="modal-overlay"></div>
       <div class="modal-content">
@@ -395,14 +397,14 @@
               <div class="logo-upload">
                 <p>Logo</p>
                 <label class="upload-label">
-                  <img src="/crm-test/assets/cloud-arrow-down.svg" alt="Upload" />
+                  <img src="/crm-test/images/cloud-arrow-down.svg" alt="Upload" />
                   <p>Upload photo</p>
                   <input type="file" accept="image/*" name="avatar" />
                 </label>
               </div>
               <div class="form-group">
                 <label for="status">Status</label>
-                <input type="text" id="status" placeholder="Title">
+                <input type="text" id="status" placeholder="Title" />
               </div>
               <div class="form-group">
                 <label for="country">Country</label>
@@ -416,11 +418,11 @@
               </div>
               <div class="form-group">
                 <label for="category">Category</label>
-                <input type="text" id="category" placeholder="Title">
+                <input type="text" id="category" placeholder="Title" />
               </div>
               <div class="form-group">
                 <label for="date">Joined date</label>
-                <input type="text" id="date" placeholder="14.02.2021"/>
+                <input type="text" id="date" placeholder="14.02.2021" />
               </div>
               <div class="form-group">
                 <label for="description">Description</label>
@@ -432,10 +434,6 @@
         </form>
       </div>
     </div>
-    </div>
-
-    
-
     
   </body>
 </html>

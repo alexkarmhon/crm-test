@@ -78,4 +78,3 @@ closeModalBtn.forEach(function(btn) {
   btn.addEventListener("click", toggleModal);
 });
 overlay.addEventListener("click", toggleModal);
-console.log("hello crm");
