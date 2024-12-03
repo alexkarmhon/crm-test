@@ -53,6 +53,7 @@
     background-color: vars.$gray-900;
     color: vars.$white;
     font-family: "Plus Jakarta Sans";
+    font-weight: 500;
     font-size: 16px;
     line-height: 24px;
     text-align: center;
@@ -64,7 +65,9 @@
   .toolbar {
     flex-direction: row;
     &.company-toolbar {
+      padding-top: 40px;
       padding-right: 28px;
+      padding-bottom: 0;
     }
   }
 }

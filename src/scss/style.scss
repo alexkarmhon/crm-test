@@ -1,12 +1,14 @@
+@use "base/reset";
+
 @use "utils/vars";
 @use "utils/fonts";
 
-@use "base/reset";
 @use "base/common";
 
-@use "components/sidebar";
-@use "components/main";
-@use "components/header";
+@use "layouts/sidebar";
+@use "layouts/main";
+@use "layouts/header";
+@use "layouts/toolbar";
 // Dashboard
 @use "components/stats-section";
 @use "components/sales-details-section";
@@ -14,10 +16,10 @@
 @use "components/countries";
 @use "components/promotions";
 // Companies
-@use "components/toolbar";
 @use "components/companies-table";
 // Company
 @use "components/company";
 // Modal & Backdrop
 @use "components/modal";
-@use "components/modal-form";
+@use "components/add-company-form";
+@use "components/add-promotion-form";

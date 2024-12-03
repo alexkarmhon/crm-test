@@ -1,0 +1,93 @@
+@use "../utils//vars";
+@use "../utils/mixins";
+
+.add-promotion-form {
+  display: flex;
+  flex-direction: column;
+
+  .add-form-title {
+    @include mixins.font-500(20px, 28px);
+    margin-bottom: 28px;
+  }
+
+  .form-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    .form-group {
+      box-shadow: 0px 2px 4px -2px #55698705, 0px 6px 10px -2px #5569870a;
+
+      label {
+        @include mixins.font-400(16px, 24px);
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 8px;
+      }
+      input {
+        width: 308px;
+        min-height: 44px;
+        padding: 12px;
+        border: 1px solid vars.$gray-300;
+        border-radius: 4px;
+
+        &::placeholder {
+          font-family: "Plus Jakarta Sans";
+          font-size: 14px;
+          line-height: 20px;
+          color: vars.$gray-300;
+        }
+      }
+    }
+
+    .image-upload {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-bottom: 20px;
+
+      p {
+        @include mixins.font-400(16px, 24px);
+      }
+
+      .upload-label {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 184px;
+        background-color: vars.$body-color;
+        border: 1px dashed vars.$slate-900;
+        border-radius: 4px;
+        cursor: pointer;
+
+        img {
+          width: 48px;
+          height: 48px;
+          margin-bottom: 4px;
+        }
+
+        p {
+          @include mixins.font-400(14px, 20px);
+          color: vars.$gray-500;
+        }
+
+        input[type="file"] {
+          display: none;
+        }
+      }
+    }
+  }
+  button {
+    padding: 10px 20px;
+    background-color: vars.$gray-900;
+    color: vars.$white;
+    font-family: "Plus Jakarta Sans";
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+  }
+}
