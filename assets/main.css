@@ -1756,6 +1756,20 @@ main .companies-container .toolbar {
     grid-column: span 3/span 9;
   }
 }
+@media screen and (width: 1440px) {
+  .modal__content:has(.company-form) {
+    top: 190px;
+    left: 496px;
+    padding: 28px;
+    margin: 0;
+  }
+  .modal__content:has(.promotion-form) {
+    top: 186px;
+    left: 664px;
+    padding: 28px;
+    margin: 0;
+  }
+}
 @media screen and (width >= 1441px) {
   .modal__content:has(.add-company-form) {
     top: 50%;
@@ -1776,19 +1790,5 @@ main .companies-container .toolbar {
        -moz-transform: translate(-50%, 0%);
         -ms-transform: translate(-50%, 0%);
             transform: translate(-50%, 0%);
-  }
-}
-@media screen and (width <= 1440px) {
-  .modal__content:has(.company-form) {
-    top: 190px;
-    left: 496px;
-    padding: 28px;
-    margin: 0;
-  }
-  .modal__content:has(.promotion-form) {
-    top: 186px;
-    left: 664px;
-    padding: 28px;
-    margin: 0;
   }
 }
