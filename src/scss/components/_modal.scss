@@ -52,7 +52,7 @@
   }
 }
 
-@media screen and (width <= 1440px) {
+@media screen and (width: 1440px) {
   .modal {
     &__content:has(.company-form) {
       top: 190px;
