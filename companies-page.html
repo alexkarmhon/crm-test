@@ -1,52 +1,62 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" class="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="/crm-test/favicon/favicon.png" type="image/x-icon" />
     <title>CRM-test</title>
-    <script type="module" crossorigin src="/crm-test/assets/main-62d7d0fe.js"></script>
+    <script type="module" crossorigin src="/crm-test/assets/main-995f2b66.js"></script>
     <link rel="stylesheet" href="/crm-test/assets/main.css">
   </head>
   <body>
-    <div class="body-wrapper">
+    <div class="body__wrapper">
       <aside class="sidebar">
         <nav class="nav-bar">
-          <a href="./index.html" class="logo__link">
+          <a href="./index.html" class="nav-bar__logo-link">
             <img
               src="images/logo-with-name.svg"
               alt="logotype image"
-              class="logotype"
+              class="nav-bar__logotype"
           /></a>
-          <ul class="nav-list">
-            <li>
-              <a href="./index.html" class="nav-list__link dashboard-link"
+          <ul class="nav-bar__list">
+            <li class="nav-bar__list-item">
+              <a
+                href="./index.html"
+                class="nav-bar__link nav-bar__link--dashboard"
                 >Dashboard</a
               >
             </li>
-            <li>
+            <li class="nav-bar__list-item">
               <a
                 href="./companies-page.html"
-                class="nav-list__link companies-link current"
+                class="nav-bar__link nav-bar__link--companies nav-bar__link--current"
                 >Companies</a
               >
             </li>
           </ul>
-          <button type="button" class="exit-button">
-            <img src="images/exit-icon.svg" alt="exit button icon" />
-            <span>Exit</span>
+          <button type="button" class="nav-bar__exit-button">
+            <img
+              src="images/exit-icon.svg"
+              alt="exit button icon"
+              class="nav-bar__exit-icon"
+            />
+            <span class="nav-bar__exit-text">Exit</span>
           </button>
         </nav>
       </aside>
       <div class="content">
-        <header>
-          <div class="header-container companies-header-container">
-            <h1 class="page-title"></h1>
-            <div class="user-info">
-              <img src="/crm-test/images/avatar.png" alt="avatar" />
-              <div>
-                <p class="user-name">Adam Smith</p>
-                <p class="user-email">adamsmith@gmail.com</p>
+        <header class="header">
+          <div class="header__container header__container--companies">
+            <h1 class="header__page-title"></h1>
+            <div class="header__user-info">
+              <img
+                src="/crm-test/images/avatar.png"
+                alt="avatar"
+                class="header__user-avatar"
+              />
+              <div class="header__user-details">
+                <p class="header__user-name">Adam Smith</p>
+                <p class="header__user-email">adamsmith@gmail.com</p>
               </div>
             </div>
           </div>
@@ -75,8 +85,8 @@
               <button class="add-button" data-modal-open>Add company</button>
             </section>
             <section class="companies">
-              <div class="table-wrapper">
-                <table>
+              <div class="companies__table-wrapper">
+                <table class="companies__table">
                   <thead>
                     <tr>
                       <th class="hidden">Category</th>
@@ -101,7 +111,7 @@
                       </td>
                       <td class="status">
                         <div class="status-badge status-badge--active">
-                          <div class="status-indicator"></div>
+                          <div class="status__indicator"></div>
                           Active
                         </div>
                       </td>
@@ -127,14 +137,18 @@
                       </td>
                       <td class="status">
                         <div class="status-badge status-badge--not-active">
-                          <div class="status-indicator"></div>
+                          <div class="status__indicator"></div>
                           Not active
                         </div>
                       </td>
                       <td class="promotion">
                         <div class="promotion__info promotion__info--no">
-                          <img src="/crm-test/images/x-mark.svg" alt="Promotion Icon" />
-                          <span>No</span>
+                          <img
+                            src="/crm-test/images/x-mark.svg"
+                            alt="Promotion Icon"
+                            class="promotion__icon"
+                          />
+                          <span class="promorion__text">No</span>
                         </div>
                       </td>
                       <td class="country">USA</td>
@@ -153,7 +167,7 @@
                       </td>
                       <td class="status">
                         <div class="status-badge status-badge--pending">
-                          <div class="status-indicator"></div>
+                          <div class="status__indicator"></div>
                           Pending
                         </div>
                       </td>
@@ -179,7 +193,7 @@
                       </td>
                       <td class="status">
                         <div class="status-badge status-badge--suspended">
-                          <div class="status-indicator"></div>
+                          <div class="status__indicator"></div>
                           Suspended
                         </div>
                       </td>
@@ -205,7 +219,7 @@
                       </td>
                       <td class="status">
                         <div class="status-badge status-badge--active">
-                          <div class="status-indicator"></div>
+                          <div class="status__indicator"></div>
                           Active
                         </div>
                       </td>
@@ -231,7 +245,7 @@
                       </td>
                       <td class="status">
                         <div class="status-badge status-badge--not-active">
-                          <div class="status-indicator"></div>
+                          <div class="status__indicator"></div>
                           Not active
                         </div>
                       </td>
@@ -257,7 +271,7 @@
                       </td>
                       <td class="status">
                         <div class="status-badge status-badge--pending">
-                          <div class="status-indicator"></div>
+                          <div class="status__indicator"></div>
                           Pending
                         </div>
                       </td>
@@ -283,7 +297,7 @@
                       </td>
                       <td class="status">
                         <div class="status-badge status-badge--suspended">
-                          <div class="status-indicator"></div>
+                          <div class="status__indicator"></div>
                           Suspended
                         </div>
                       </td>
@@ -309,7 +323,7 @@
                       </td>
                       <td class="status">
                         <div class="status-badge status-badge--not-active">
-                          <div class="status-indicator"></div>
+                          <div class="status__indicator"></div>
                           Not active
                         </div>
                       </td>
@@ -335,7 +349,7 @@
                       </td>
                       <td class="status">
                         <div class="status-badge status-badge--pending">
-                          <div class="status-indicator"></div>
+                          <div class="status__indicator"></div>
                           Pending
                         </div>
                       </td>
@@ -361,7 +375,7 @@
                       </td>
                       <td class="status">
                         <div class="status-badge status-badge--pending">
-                          <div class="status-indicator"></div>
+                          <div class="status__indicator"></div>
                           Pending
                         </div>
                       </td>
@@ -384,17 +398,17 @@
     </div>
 
     <!-- Modal -->
-    <div class="modal is-hidden" data-modal>
-      <div class="modal-overlay"></div>
-      <div class="modal-content">
+    <div class="modal modal--hidden" data-modal>
+      <div class="modal__overlay"></div>
+      <div class="modal__content">
         <button type="button" class="close-button" data-modal-close>
           <img src="/crm-test/images/x-mark-close.svg" alt="Close modal" />
         </button>
-        <form class="add-company-form">
-          <p class="add-form-title">Add new company</p>
-          <div class="form-left-right">
-            <div class="form-left">
-              <div class="logo-upload">
+        <form class="company-form">
+          <p class="company-form__title">Add new company</p>
+          <div class="company-form__layout">
+            <div class="company-form__form-left">
+              <div class="image-upload">
                 <p>Logo</p>
                 <label class="upload-label">
                   <img src="/crm-test/images/cloud-arrow-down.svg" alt="Upload" />
@@ -411,7 +425,7 @@
                 <input type="text" id="country" placeholder="Country" />
               </div>
             </div>
-            <div class="form-right">
+            <div class="company-form__form-right">
               <div class="form-group">
                 <label for="name">Name</label>
                 <input type="text" id="name" placeholder="Title" />
@@ -430,7 +444,9 @@
               </div>
             </div>
           </div>
-          <button type="submit" data-modal-close>Add company</button>
+          <button type="submit" class="form-submit-button" data-modal-close>
+            Add company
+          </button>
         </form>
       </div>
     </div>

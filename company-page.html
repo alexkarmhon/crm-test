@@ -1,52 +1,62 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" class="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="/crm-test/favicon/favicon.png" type="image/x-icon" />
     <title>CRM-test</title>
-    <script type="module" crossorigin src="/crm-test/assets/main-62d7d0fe.js"></script>
+    <script type="module" crossorigin src="/crm-test/assets/main-995f2b66.js"></script>
     <link rel="stylesheet" href="/crm-test/assets/main.css">
   </head>
   <body>
-    <div class="body-wrapper">
+    <div class="body__wrapper">
       <aside class="sidebar">
         <nav class="nav-bar">
-          <a href="./index.html" class="logo__link">
+          <a href="./index.html" class="nav-bar__logo-link">
             <img
               src="images/logo-with-name.svg"
               alt="logotype image"
-              class="logotype"
+              class="nav-bar__logotype"
           /></a>
-          <ul class="nav-list">
-            <li>
-              <a href="./index.html" class="nav-list__link dashboard-link"
+          <ul class="nav-bar__list">
+            <li class="nav-bar__list-item">
+              <a
+                href="./index.html"
+                class="nav-bar__link nav-bar__link--dashboard"
                 >Dashboard</a
               >
             </li>
-            <li>
+            <li class="nav-bar__list-item">
               <a
                 href="./companies-page.html"
-                class="nav-list__link companies-link"
+                class="nav-bar__link nav-bar__link--companies"
                 >Companies</a
               >
             </li>
           </ul>
-          <button type="button" class="exit-button">
-            <img src="images/exit-icon.svg" alt="exit button icon" />
-            <span>Exit</span>
+          <button type="button" class="nav-bar__exit-button">
+            <img
+              src="images/exit-icon.svg"
+              alt="exit button icon"
+              class="nav-bar__exit-icon"
+            />
+            <span class="nav-bar__exit-text">Exit</span>
           </button>
         </nav>
       </aside>
       <div class="content">
-        <header>
-          <div class="header-container company-header-container">
-            <h1 class="page-title">Costco Wholesale</h1>
-            <div class="user-info">
-              <img src="/crm-test/images/avatar.png" alt="avatar" />
-              <div>
-                <p class="user-name">Adam Smith</p>
-                <p class="user-email">adamsmith@gmail.com</p>
+        <header class="header">
+          <div class="header__container header__container--company">
+            <h1 class="header__page-title">Costco Wholesale</h1>
+            <div class="header__user-info">
+              <img
+                src="/crm-test/images/avatar.png"
+                alt="avatar"
+                class="header__user-avatar"
+              />
+              <div class="header__user-details">
+                <p class="header__user-name">Adam Smith</p>
+                <p class="header__user-email">adamsmith@gmail.com</p>
               </div>
             </div>
           </div>
@@ -75,28 +85,28 @@
               <button class="add-button" data-modal-open>Add promotion</button>
             </section>
             <section class="company">
-              <div class="company-wrapper">
-                <div class="company-information">
-                  <div class="company-information__banner">
+              <div class="company__wrapper">
+                <div class="company__information">
+                  <div class="company__information-banner">
                     <img
-                      class="logo"
+                      class="company__logo"
                       src="/crm-test/images/company-logo.png"
                       alt="company logotype"
                     />
-                    <h2 class="company-name">Costco Wholesale</h2>
-                    <div class="status-badge status-badge--active">
-                      <div class="status-indicator"></div>
+                    <h2 class="company__name">Costco Wholesale</h2>
+                    <div class="company__status-badge status-badge--active">
+                      <div class="indicator"></div>
                       Active
                     </div>
                   </div>
-                  <div class="company-information__about">
-                    <div class="details">
+                  <div class="company__information-about">
+                    <div class="company__details">
                       <p class="subtitle">About company</p>
                       <p>Category: products</p>
                       <p>Country: USA</p>
                       <p>Joined data: 19.02.2023</p>
                     </div>
-                    <p class="overview">
+                    <p class="company__overview">
                       Worem ipsum dolor sit amet, consectetur adipiscing elit.
                       Nunc vulputate libero et velit interdum, ac aliquet odio
                       mattis. Class aptent taciti sociosqu ad litora torquent
@@ -104,79 +114,79 @@
                     </p>
                   </div>
                 </div>
-                <div class="company-promotions">
-                  <div class="promotion">
-                    <div class="promotion__banner">
+                <div class="company__promotions">
+                  <div class="company__promotion">
+                    <div class="company__promotion-banner">
                       <div class="discount">
                         <p class="value">-20%</p>
                       </div>
                     </div>
-                    <div class="promotion__description">
+                    <div class="company__promotion-description">
                       <h3>Discount on this product</h3>
                       <p>
                         Jorem ipsum dolor sit amet, consectetur adipiscing elit.
                       </p>
                     </div>
                   </div>
-                  <div class="promotion">
-                    <div class="promotion__banner">
+                  <div class="company__promotion">
+                    <div class="company__promotion-banner">
                       <div class="discount">
                         <p class="value">-20%</p>
                       </div>
                     </div>
-                    <div class="promotion__description">
+                    <div class="company__promotion-description">
                       <h3>Discount on this product</h3>
                       <p>
                         Jorem ipsum dolor sit amet, consectetur adipiscing elit.
                       </p>
                     </div>
                   </div>
-                  <div class="promotion">
-                    <div class="promotion__banner">
+                  <div class="company__promotion">
+                    <div class="company__promotion-banner">
                       <div class="discount">
                         <p class="value">-20%</p>
                       </div>
                     </div>
-                    <div class="promotion__description">
+                    <div class="company__promotion-description">
                       <h3>Discount on this product</h3>
                       <p>
                         Jorem ipsum dolor sit amet, consectetur adipiscing elit.
                       </p>
                     </div>
                   </div>
-                  <div class="promotion">
-                    <div class="promotion__banner">
+                  <div class="company__promotion">
+                    <div class="company__promotion-banner">
                       <div class="discount">
                         <p class="value">-20%</p>
                       </div>
                     </div>
-                    <div class="promotion__description">
+                    <div class="company__promotion-description">
                       <h3>Discount on this product</h3>
                       <p>
                         Jorem ipsum dolor sit amet, consectetur adipiscing elit.
                       </p>
                     </div>
                   </div>
-                  <div class="promotion">
-                    <div class="promotion__banner">
+                  <div class="company__promotion">
+                    <div class="company__promotion-banner">
                       <div class="discount">
                         <p class="value">-20%</p>
                       </div>
                     </div>
-                    <div class="promotion__description">
+                    <div class="company__promotion-description">
                       <h3>Discount on this product</h3>
                       <p>
                         Jorem ipsum dolor sit amet, consectetur adipiscing elit.
                       </p>
                     </div>
                   </div>
-                  <div class="promotion">
-                    <div class="promotion__banner">
+                  <div class="company__promotion">
+                    <div class="company__promotion-banner">
                       <div class="discount">
                         <p class="value">-20%</p>
                       </div>
                     </div>
-                    <div class="promotion__description">
+                    <div class="company__promotion-description">
                       <h3>Discount on this product</h3>
                       <p>
                         Jorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -192,15 +202,15 @@
     </div>
 
     <!-- Modal -->
-    <div class="modal is-hidden" data-modal>
-      <div class="modal-overlay"></div>
-      <div class="modal-content">
+    <div class="modal modal--hidden" data-modal>
+      <div class="modal__overlay"></div>
+      <div class="modal__content">
         <button type="button" class="close-button" data-modal-close>
           <img src="/crm-test/images/x-mark-close.svg" alt="Close modal" />
         </button>
-        <form class="add-promotion-form">
-          <p class="add-form-title">Add promotion</p>
-          <div class="form-wrapper">
+        <form class="promotion-form">
+          <p class="promotion-form__title">Add promotion</p>
+          <div class="promotion-form__wrapper">
             <div class="form-group">
               <label for="status">Title</label>
               <input type="text" id="status" placeholder="Title" />
@@ -222,7 +232,9 @@
               </label>
             </div>
           </div>
-          <button type="submit" data-modal-close>Add promotion</button>
+          <button type="submit" class="form-submit-button" data-modal-close>
+            Add promotion
+          </button>
         </form>
       </div>
     </div>

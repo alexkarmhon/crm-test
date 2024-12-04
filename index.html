@@ -1,84 +1,92 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" class="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="/crm-test/favicon/favicon.png" type="image/x-icon" />
     <title>CRM-test</title>
-    <script type="module" crossorigin src="/crm-test/assets/main-62d7d0fe.js"></script>
+    <script type="module" crossorigin src="/crm-test/assets/main-995f2b66.js"></script>
     <link rel="stylesheet" href="/crm-test/assets/main.css">
   </head>
   <body>
-    <div class="body-wrapper">
+    <div class="body__wrapper">
       <aside class="sidebar">
         <nav class="nav-bar">
-          <a href="./index.html" class="logo__link">
+          <a href="./index.html" class="nav-bar__logo-link">
             <img
               src="images/logo-with-name.svg"
               alt="logotype image"
-              class="logotype"
+              class="nav-bar__logotype"
           /></a>
-          <ul class="nav-list">
-            <li>
+          <ul class="nav-bar__list">
+            <li class="nav-bar__list-item">
               <a
                 href="./index.html"
-                class="nav-list__link dashboard-link current"
+                class="nav-bar__link nav-bar__link--dashboard nav-bar__link--current"
                 >Dashboard</a
               >
             </li>
-            <li>
+            <li class="nav-bar__list-item">
               <a
                 href="./companies-page.html"
-                class="nav-list__link companies-link"
+                class="nav-bar__link nav-bar__link--companies"
                 >Companies</a
               >
             </li>
           </ul>
-          <button type="button" class="exit-button">
-            <img src="images/exit-icon.svg" alt="exit button icon" />
-            <span>Exit</span>
+          <button type="button" class="nav-bar__exit-button">
+            <img
+              src="images/exit-icon.svg"
+              alt="exit button icon"
+              class="nav-bar__exit-icon"
+            />
+            <span class="nav-bar__exit-text">Exit</span>
           </button>
         </nav>
       </aside>
       <div class="content">
-        <header>
-          <div class="header-container dashboard-header-container">
-            <h1 class="page-title"></h1>
-            <div class="user-info">
-              <img src="/crm-test/images/avatar.png" alt="avatar" />
-              <div>
-                <p class="user-name">Adam Smith</p>
-                <p class="user-email">adamsmith@gmail.com</p>
+        <header class="header">
+          <div class="header__container header__container--dashboard">
+            <h1 class="header__page-title"></h1>
+            <div class="header__user-info">
+              <img
+                src="/crm-test/images/avatar.png"
+                alt="avatar"
+                class="header__user-avatar"
+              />
+              <div class="header__user-details">
+                <p class="header__user-name">Adam Smith</p>
+                <p class="header__user-email">adamsmith@gmail.com</p>
               </div>
             </div>
           </div>
         </header>
         <main>
-          <div class="dashboard-container">
-            <section class="stats">
-              <div class="stats-wrapper">
-                <div class="stats-wrapper__cell">
-                  <p class="stat-name">Total promotions</p>
-                  <p class="stat-value">432</p>
+          <div class="dashboard">
+            <section class="section stats">
+              <div class="stats__wrapper">
+                <div class="stats__cell">
+                  <p class="stats__name">Total promotions</p>
+                  <p class="stats__value">432</p>
                 </div>
-                <div class="stats-wrapper__cell">
-                  <p class="stat-name">Total category</p>
-                  <p class="stat-value">8</p>
+                <div class="stats__cell">
+                  <p class="stats__name">Total category</p>
+                  <p class="stats__value">8</p>
                 </div>
-                <div class="stats-wrapper__cell">
-                  <p class="stat-name">New companies</p>
-                  <p class="stat-value">28</p>
+                <div class="stats__cell">
+                  <p class="stats__name">New companies</p>
+                  <p class="stats__value">28</p>
                 </div>
-                <div class="stats-wrapper__cell">
-                  <p class="stat-name">Total active companies</p>
-                  <p class="stat-value">670</p>
+                <div class="stats__cell">
+                  <p class="stats__name">Total active companies</p>
+                  <p class="stats__value">670</p>
                 </div>
               </div>
             </section>
-            <section class="sales">
-              <p class="section-title">Sales details</p>
-              <div class="sales-wrapper">
-                <table>
+            <section class="section sales">
+              <p class="section__title">Sales details</p>
+              <div class="sales__wrapper">
+                <table class="sales__table">
                   <thead>
                     <tr>
                       <th scope="col">Company</th>
@@ -157,63 +165,63 @@
                 </table>
               </div>
             </section>
-            <section class="categories">
-              <p class="section-title">Categories of companies</p>
-              <div class="categories-wrapper">
-                <div class="categories-wrapper__cell">
-                  <p class="category">Products</p>
-                  <p class="value">4</p>
+            <section class="section categories">
+              <p class="section__title">Categories of companies</p>
+              <div class="categories__list">
+                <div class="categories__item">
+                  <p class="categories__category">Products</p>
+                  <p class="categories__value">4</p>
                 </div>
-                <div class="categories-wrapper__cell">
-                  <p class="category">Products</p>
-                  <p class="value">8</p>
+                <div class="categories__item">
+                  <p class="categories__category">Products</p>
+                  <p class="categories__value">8</p>
                 </div>
-                <div class="categories-wrapper__cell">
-                  <p class="category">Products</p>
-                  <p class="value">26</p>
+                <div class="categories__item">
+                  <p class="categories__category">Products</p>
+                  <p class="categories__value">26</p>
                 </div>
-                <div class="categories-wrapper__cell">
-                  <p class="category">Products</p>
-                  <p class="value">1</p>
+                <div class="categories__item">
+                  <p class="categories__category">Products</p>
+                  <p class="categories__value">1</p>
                 </div>
-                <div class="categories-wrapper__cell">
-                  <p class="category">Products</p>
-                  <p class="value">37</p>
+                <div class="categories__item">
+                  <p class="categories__category">Products</p>
+                  <p class="categories__value">37</p>
                 </div>
-                <div class="categories-wrapper__cell">
-                  <p class="category">Products</p>
-                  <p class="value">22</p>
+                <div class="categories__item">
+                  <p class="categories__category">Products</p>
+                  <p class="categories__value">22</p>
                 </div>
-                <div class="categories-wrapper__cell">
-                  <p class="category">Products</p>
-                  <p class="value">4</p>
+                <div class="categories__item">
+                  <p class="categories__category">Products</p>
+                  <p class="categories__value">4</p>
                 </div>
-                <div class="categories-wrapper__cell">
-                  <p class="category">Products</p>
-                  <p class="value">12</p>
+                <div class="categories__item">
+                  <p class="categories__category">Products</p>
+                  <p class="categories__value">12</p>
                 </div>
               </div>
             </section>
-            <section class="countries">
-              <p class="section-title">Countries of companies</p>
-              <div class="countries-wrapper">
-                <ul class="countries-list">
-                  <li>Canada - 4</li>
-                  <li>USA - 4</li>
-                  <li>Italia - 2</li>
-                  <li>Ukraine - 2</li>
-                  <li>Spain - 2</li>
+            <section class="section countries">
+              <p class="section__title">Countries of companies</p>
+              <div class="countries__content">
+                <ul class="countries__list">
+                  <li class="companies__item">Canada - 4</li>
+                  <li class="companies__item">USA - 4</li>
+                  <li class="companies__item">Italia - 2</li>
+                  <li class="companies__item">Ukraine - 2</li>
+                  <li class="companies__item">Spain - 2</li>
                 </ul>
-                <div class="world-map">
+                <div class="countries__map">
                   <img src="/crm-test/images/world.svg" alt="world map image" />
                 </div>
               </div>
             </section>
-            <section class="promotions">
-              <p class="section-title">Promotions</p>
-              <div class="promotions-wrapper">
+            <section class="section promotions">
+              <p class="section__title">Promotions</p>
+              <div class="promotions__wrapper">
                 <div class="sales-wrapper">
-                  <table>
+                  <table class="promotions__table">
                     <thead>
                       <tr>
                         <th scope="col">Company</th>

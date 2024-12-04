@@ -43,7 +43,7 @@ const style = "";
 const adjustMainMargin = () => {
   const aside = document.querySelector("aside");
   const main = document.querySelector(".content");
-  const wrapper = document.querySelector(".body-wrapper");
+  const wrapper = document.querySelector(".body__wrapper");
   const isWrapperBlock = getComputedStyle(wrapper).flexDirection === "column";
   if (aside && main && isWrapperBlock) {
     main.style.marginTop = `${aside.offsetHeight}px`;
@@ -55,8 +55,8 @@ const adjustMainMargin = () => {
 };
 window.addEventListener("load", adjustMainMargin);
 window.addEventListener("resize", adjustMainMargin);
-const currentLink = document.querySelector(".current");
-const currentPageTitle = document.querySelector(".page-title");
+const currentLink = document.querySelector(".nav-bar__link--current");
+const currentPageTitle = document.querySelector(".header__page-title");
 const setCurrentPageTitle = () => {
   if (!currentLink)
     return;
@@ -66,10 +66,10 @@ window.addEventListener("DOMContentLoaded", setCurrentPageTitle);
 const openModalBtn = document.querySelectorAll("[data-modal-open]");
 const closeModalBtn = document.querySelectorAll("[data-modal-close]");
 const modal = document.querySelector("[data-modal]");
-const overlay = document.querySelector(".modal-overlay");
+const overlay = document.querySelector(".modal__overlay");
 const toggleModal = () => {
   document.body.classList.toggle("modal-open");
-  modal.classList.toggle("is-hidden");
+  modal.classList.toggle("modal--hidden");
 };
 openModalBtn.forEach(function(btn) {
   btn.addEventListener("click", toggleModal);
@@ -77,4 +77,4 @@ openModalBtn.forEach(function(btn) {
 closeModalBtn.forEach(function(btn) {
   btn.addEventListener("click", toggleModal);
 });
-overlay.addEventListener("click", toggleModal);
+overlay == null ? void 0 : overlay.addEventListener("click", toggleModal);
