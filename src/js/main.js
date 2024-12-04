@@ -1,5 +1,5 @@
-import "../scss/style.scss";
+import '../scss/style.scss';
 
-import "./utils/adjustMainMargin";
-import "./utils/currentPageTitle";
-import "./modal";
+import './utils/adjustMainMargin';
+import './utils/currentPageTitle';
+import './modal';

@@ -1,63 +1,67 @@
-@use "../utils/vars";
-@use "../utils/mixins";
+@use '../utils/vars';
+@use '../utils/mixins';
 
 .categories {
   background-color: vars.$secondary-background-color;
   border: 1px solid vars.$secondary-background-color;
 
-  .categories-wrapper {
+  &__list {
     display: grid;
     grid-template-columns: repeat(8, minmax(0, 1fr));
     gap: 12px;
-    padding: 0 20px 20px 20px;
+    padding: 0 20px 20px;
+  }
 
-    &__cell {
-      grid-column: span 4 / span 4;
-      padding: 12px 12px 0 12px;
-      background-color: vars.$gray-900;
-      border-radius: 4px;
+  &__item {
+    grid-column: span 4 / span 4;
+    padding: 12px 12px 0;
+    background-color: vars.$gray-900;
+    border-radius: 4px;
 
-      .category {
-        @include mixins.font-400(14px, 20px);
-        margin-bottom: 4px;
-        color: vars.$white;
-      }
-
-      .category::before {
-        content: "";
-        display: block;
-        width: 16px;
-        height: 2px;
-        margin-bottom: 8px;
-        border-radius: 20px;
-        background-color: vars.$white;
-      }
-
-      .value {
-        @include mixins.font-600(60px, 60px);
-        text-align: end;
-      }
-
-      &:nth-of-type(2n) {
-        color: vars.$lime-200;
-      }
-      &:nth-of-type(2n + 1) {
-        color: vars.$purple-200;
-      }
+    &:nth-of-type(2n) {
+      color: vars.$lime-200;
     }
+
+    &:nth-of-type(2n + 1) {
+      color: vars.$purple-200;
+    }
+  }
+
+  &__category {
+    @include mixins.font-400(14px, 20px);
+
+    margin-bottom: 4px;
+    color: vars.$white;
+  }
+
+  &__category::before {
+    content: '';
+    display: block;
+    width: 16px;
+    height: 2px;
+    margin-bottom: 8px;
+    border-radius: 20px;
+    background-color: vars.$white;
+  }
+
+  &__value {
+    @include mixins.font-600(60px, 60px);
+
+    text-align: end;
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (width >= 768px) {
   .categories {
-    .categories-wrapper {
+    &__list {
       grid-template-columns: repeat(12, minmax(0, 1fr));
-      &__cell {
-        grid-column: span 3 / span 3;
-        padding: 12px 12px 0 12px;
-        background-color: vars.$gray-900;
-        border-radius: 4px;
-      }
+    }
+
+    &__item {
+      grid-column: span 3 / span 3;
+      padding: 12px 12px 0;
+      background-color: vars.$gray-900;
+      border-radius: 4px;
     }
   }
 }

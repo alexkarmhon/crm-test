@@ -1,12 +1,14 @@
-@use "../utils/vars";
-@use "../utils/mixins";
+@use '../utils/vars';
+@use '../utils/mixins';
 
-.company-information {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+.company {
+  &__information {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
 
-  &__banner {
+  &__information-banner {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -14,138 +16,155 @@
     padding: 28px;
     background-color: vars.$gray-900;
     border-radius: 4px;
+  }
 
-    .logo {
-      width: 80px;
-      height: 80px;
+  &__logo {
+    width: 80px;
+    height: 80px;
+  }
+
+  &__name {
+    @include mixins.font-600(16px, 24px);
+
+    color: vars.$white;
+  }
+
+  &__status-badge {
+    @include mixins.font-500(14px, 20px);
+
+    display: inline-flex;
+    align-items: center;
+    padding: 4px 14px;
+    border-radius: 28px;
+
+    .indicator {
+      display: block;
+      width: 4px;
+      height: 4px;
+      margin-right: 8px;
+      background-color: currentcolor;
+      border-radius: 2px;
     }
 
-    .company-name {
-      @include mixins.font-600(16px, 24px);
-      color: vars.$white;
+    &--active {
+      color: vars.$green-700;
+      background-color: vars.$status-active-color;
     }
 
-    .status-badge {
-      @include mixins.font-500(14px, 20px);
-      display: inline-flex;
-      align-items: center;
-      padding: 4px 14px;
-      border-radius: 28px;
+    &--not-active {
+      color: vars.$red-700;
+      background-color: vars.$status-not-active-color;
+    }
 
-      .status-indicator {
-        display: block;
-        width: 4px;
-        height: 4px;
-        margin-right: 8px;
-        background-color: currentColor;
-        border-radius: 2px;
-      }
+    &--pending {
+      color: vars.$orange-700;
+      background-color: vars.$status-pending-color;
+    }
 
-      &--active {
-        color: vars.$green-700;
-        background-color: vars.$status-active-color;
-      }
-
-      &--not-active {
-        color: vars.$red-700;
-        background-color: vars.$status-not-active-color;
-      }
-
-      &--pending {
-        color: vars.$orange-700;
-        background-color: vars.$status-pending-color;
-      }
-
-      &--suspended {
-        color: vars.$blue-700;
-        background-color: vars.$status-suspended-color;
-      }
+    &--suspended {
+      color: vars.$blue-700;
+      background-color: vars.$status-suspended-color;
     }
   }
-  &__about {
+
+  &__information-about {
     padding: 20px;
     background-color: vars.$secondary-background-color;
     border-radius: 4px;
-    .details {
-      border-bottom: 1px solid vars.$gray-300;
-      padding-bottom: 32px;
+  }
 
-      p {
-        @include mixins.font-400(16px, 24px);
+  &__details {
+    border-bottom: 1px solid vars.$gray-300;
+    padding-bottom: 32px;
 
-        &:not(:last-of-type) {
-          margin-bottom: 12px;
-        }
-      }
+    p {
+      @include mixins.font-400(16px, 24px);
 
-      .subtitle {
-        @include mixins.font-600(20px, 28px);
-        margin-bottom: 20px;
+      &:not(:last-of-type) {
+        margin-bottom: 12px;
       }
     }
-    .overview {
-      @include mixins.font-400(16px, 24px);
-      padding-top: 32px;
+
+    .subtitle {
+      @include mixins.font-600(20px, 28px);
+
+      margin-bottom: 20px;
     }
   }
-}
 
-.company-promotions {
-  display: grid;
-  grid-template-columns: repeat(12, minmax(0, 1fr));
-  height: fit-content;
-  gap: 20px;
+  &__overview {
+    @include mixins.font-400(16px, 24px);
 
-  .promotion {
+    padding-top: 32px;
+  }
+
+  &__promotions {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    height: fit-content;
+    gap: 20px;
+  }
+
+  &__promotion {
     grid-column: span 12 / span 12;
     background-color: vars.$secondary-background-color;
     border-radius: 4px;
-    &__banner {
-      height: 160px;
-      overflow: hidden;
-      border-radius: 4px;
-      background-color: vars.$promotion-banner-background;
+  }
 
-      .discount {
-        width: 52px;
-        height: 52px;
-        padding-right: 2px;
-        padding-top: 12px;
-        color: vars.$lime-200;
-        background-color: vars.$gray-900;
-        border-right: 1px solid vars.$lime-200;
-        border-bottom-right-radius: 999px;
-        .value {
-          @include mixins.font-700(12px, 16px);
-          text-align: center;
-        }
+  &__promotion-banner {
+    height: 160px;
+    overflow: hidden;
+    border-radius: 4px;
+    background-color: vars.$promotion-banner-background;
+
+    .discount {
+      width: 52px;
+      height: 52px;
+      padding-right: 2px;
+      padding-top: 12px;
+      color: vars.$lime-200;
+      background-color: vars.$gray-900;
+      border-right: 1px solid vars.$lime-200;
+      border-bottom-right-radius: 999px;
+
+      .value {
+        @include mixins.font-700(12px, 16px);
+
+        text-align: center;
       }
     }
-    &__description {
-      padding: 20px;
-      h3 {
-        @include mixins.font-600(16px, 24px);
-        margin-bottom: 12px;
-      }
-      p {
-        @include mixins.font-400(14px, 20px);
-      }
+  }
+
+  &__promotion-description {
+    padding: 20px;
+
+    h3 {
+      @include mixins.font-600(16px, 24px);
+
+      margin-bottom: 12px;
+    }
+
+    p {
+      @include mixins.font-400(14px, 20px);
     }
   }
 }
 
-@media screen and (min-width: 425px) {
-  .company-promotions {
-    .promotion {
+@media screen and (width >= 425px) {
+  .company {
+    &__promotion {
       grid-column: span 6 / span 12;
     }
   }
 }
 
-@media screen and (min-width: 1440px) {
-  .company-promotions {
-    grid-template-columns: repeat(9, minmax(0, 1fr));
-    .promotion {
+@media screen and (width >= 1440px) {
+  .company {
+    &__promotions {
+      grid-template-columns: repeat(9, minmax(0, 1fr));
+    }
+
+    &__promotion {
       grid-column: span 3 / span 9;
     }
   }

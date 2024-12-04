@@ -1,25 +1,21 @@
-@use "base/reset";
-
-@use "utils/vars";
-@use "utils/fonts";
-
-@use "base/common";
-
-@use "layouts/sidebar";
-@use "layouts/main";
-@use "layouts/header";
-@use "layouts/toolbar";
-// Dashboard
-@use "components/stats-section";
-@use "components/sales-details-section";
-@use "components/categories";
-@use "components/countries";
-@use "components/promotions";
-// Companies
-@use "components/companies-table";
-// Company
-@use "components/company";
-// Modal & Backdrop
-@use "components/modal";
-@use "components/add-company-form";
-@use "components/add-promotion-form";
+@use 'base/reset';
+@use 'utils/vars';
+@use 'utils/fonts';
+@use 'base/common';
+@use 'layouts/sidebar';
+@use 'layouts/main';
+@use 'layouts/header';
+@use 'layouts/toolbar';
+@use 'components/stats-section';
+@use 'components/sales-details-section';
+@use 'components/categories';
+@use 'components/countries';
+@use 'components/promotions';
+@use 'components/companies-table';
+@use 'components/company';
+@use 'components/modal';
+@use 'components/form-group';
+@use 'components/form-submit-button';
+@use 'components/image-uploader';
+@use 'components/add-company-form';
+@use 'components/add-promotion-form';

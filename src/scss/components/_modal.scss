@@ -1,4 +1,4 @@
-@use "../utils/vars";
+@use '../utils/vars';
 
 .modal {
   position: fixed;
@@ -6,14 +6,14 @@
   z-index: 50;
   overflow: auto;
 
-  &-overlay {
+  &__overlay {
     position: fixed;
     inset: 0;
     background-color: vars.$backdrop-color;
     transition: opacity 0.3s ease-in-out;
   }
 
-  &-content {
+  &__content {
     position: relative;
     background-color: vars.$secondary-background-color;
     border-radius: 8px;
@@ -29,7 +29,7 @@
       position: absolute;
       top: 12px;
       right: 12px;
-      padding: 0px;
+      padding: 0;
       background: none;
       border: none;
       cursor: pointer;
@@ -41,17 +41,27 @@
       }
     }
   }
+
+  &--hidden {
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(0);
+    transition:
+      transform 400ms ease-out,
+      opacity 400ms ease-out;
+  }
 }
 
-@media screen and (width: 1440px) {
+@media screen and (width <= 1440px) {
   .modal {
-    &-content:has(.add-company-form) {
+    &__content:has(.company-form) {
       top: 190px;
       left: 496px;
       padding: 28px;
       margin: 0;
     }
-    &-content:has(.add-promotion-form) {
+
+    &__content:has(.promotion-form) {
       top: 186px;
       left: 664px;
       padding: 28px;
@@ -60,16 +70,17 @@
   }
 }
 
-@media screen and (min-width: 1441px) {
+@media screen and (width >= 1441px) {
   .modal {
-    &-content:has(.add-company-form) {
+    &__content:has(.add-company-form) {
       top: 50%;
       left: 50%;
       padding: 28px;
       margin: 0;
       transform: translate(-50%, -50%);
     }
-    &-content:has(.add-promotion-form) {
+
+    &__content:has(.add-promotion-form) {
       top: 186px;
       left: 50%;
       padding: 28px;
@@ -77,11 +88,4 @@
       transform: translate(-50%, 0%);
     }
   }
-}
-
-.is-hidden {
-  opacity: 0;
-  pointer-events: none;
-  transform: scale(0);
-  transition: transform 400ms ease-out, opacity 400ms ease-out;
 }

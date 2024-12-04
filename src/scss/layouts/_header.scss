@@ -1,68 +1,74 @@
-@use "../utils/vars";
-@use "../utils/mixins";
+@use '../utils/vars';
+@use '../utils/mixins';
 
-header {
-  .header-container {
+.header {
+  &__container {
     display: flex;
     align-items: center;
     gap: 20px;
-    padding: 24px 14px 24px 14px;
+    padding: 24px 14px;
     border-bottom: 1px solid vars.$gray-300;
+  }
 
-    .page-title {
-      @include mixins.font-600(16px, 36px);
-      flex: 1;
-      border-right: 1px solid vars.$gray-300;
-    }
-    .user-info {
-      display: flex;
-      gap: 12px;
+  &__page-title {
+    @include mixins.font-600(16px, 36px);
 
-      img {
-        width: 44px;
-        height: 44px;
-      }
+    flex: 1;
+    border-right: 1px solid vars.$gray-300;
+  }
 
-      .user-name {
-        display: none;
-      }
-      .user-email {
-        display: none;
-      }
-    }
+  &__user-info {
+    display: flex;
+    gap: 12px;
+  }
+
+  &__user-avatar {
+    width: 44px;
+    height: 44px;
+  }
+
+  &__user-name {
+    display: none;
+  }
+
+  &__user-email {
+    display: none;
   }
 }
 
-@media screen and (min-width: 768px) {
-  header {
-    .header-container {
+@media screen and (width >= 768px) {
+  .header {
+    &__container {
       padding-left: 28px;
-      .page-title {
-        font-size: 30px;
-      }
+    }
 
-      .user-info {
-        .user-name {
-          @include mixins.font-600(15px, 24px);
-          display: block;
-        }
-        .user-email {
-          @include mixins.font-300(14px, 20px);
-          display: block;
-        }
-      }
+    &__page-title {
+      font-size: 30px;
+    }
+
+    &__user-name {
+      @include mixins.font-600(15px, 24px);
+
+      display: block;
+    }
+
+    &__user-email {
+      @include mixins.font-300(14px, 20px);
+
+      display: block;
     }
   }
 }
 
-@media (min-width: 1280px) {
-  header {
-    .dashboard-header-container {
+@media (width >= 1280px) {
+  .header {
+    &__container--dashboard {
       padding-left: 40px;
       padding-right: 28px;
     }
-    .companies-header-container,
-    .company-header-container {
+
+    &__container--companies,
+    &__container--company {
       padding-right: 40px;
     }
   }

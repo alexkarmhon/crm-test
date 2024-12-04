@@ -1,12 +1,12 @@
-@use "../utils/vars";
-@use "../utils/mixins";
+@use '../utils/vars';
+@use '../utils/mixins';
 
 .sales {
   background-color: vars.$secondary-background-color;
   border: 1px solid vars.$secondary-background-color;
   overflow: hidden;
 
-  table {
+  &__table {
     width: 100%;
     border-spacing: 0;
 
@@ -14,6 +14,7 @@
       tr {
         th {
           @include mixins.font-400(12px, 16px);
+
           padding: 6px 20px;
           text-align: left;
 
@@ -26,13 +27,15 @@
           }
 
           &:nth-child(1) {
-            color: #ffffff;
+            color: #fff;
             background-color: vars.$gray-900;
           }
+
           &:nth-child(2) {
             text-align: center;
             background-color: vars.$purple-200;
           }
+
           &:nth-child(3) {
             text-align: center;
             background-color: vars.$lime-200;
@@ -45,12 +48,15 @@
       tr:nth-child(2n) {
         background-color: vars.$secondary-background-color;
       }
+
       tr {
         &:nth-child(2n + 1) {
-          background-color: #ffffff;
+          background-color: #fff;
         }
+
         td {
           @include mixins.font-400(14px, 20px);
+
           padding: 8px 19px;
           text-align: center;
           border-right: 1px solid vars.$secondary-background-color;

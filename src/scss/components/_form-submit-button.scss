@@ -1,0 +1,15 @@
+@use '../utils//vars';
+@use '../utils/mixins';
+
+.form-submit-button {
+  padding: 10px 20px;
+  background-color: vars.$gray-900;
+  color: vars.$white;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
